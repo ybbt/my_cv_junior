@@ -7,25 +7,31 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Comfortaa&family=Diplomata+SC&family=Fira+Sans&family=Gabriela&family=Philosopher:ital@1&family=Yeseva+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lightgallery-bundle.min.css" integrity="sha512-lgRFGedXdci5Ykc5Wbgd8QCzt3lBmnkWcMRAS8myln2eMCDwQBrHmjqvUj9rBcKOyWMC+EYJnvEppggw1v+m8Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" integrity="sha512-WEQNv9d3+sqyHjrqUZobDhFARZDko2wpWdfcpv44lsypsSuMO0kHGd3MQ8rrsBn/Qa39VojphdU6CMkpJUmDVw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdn.tailwindcss.com"></script>
+
         <title>CV</title>
     </head>
     <body class="lg:flex flex-col items-center h-full">
         <div class="min-h-full flex flex-col items-center min-h-screen justify-between bg-[#272727]">
-            <header class="text-white h-20 pl-10 flex items-center justify-center box-border border-2 border-slate-300 w-full sticky top-0 bg-[#272727] z-10">
+            <header class="text-white h-13 leading-5 sm:h-20 pl-10 flex items-center justify-center box-border border-2 border-slate-300 w-full sticky top-0 bg-[#272727] z-10">
                 <h1 class="sm:text-xl md:text-3xl xl:text-5xl font-bold font-['Diplomata_SC'] uppercase tracking-widest">Oleksii Klymenko</h1>
             </header>
             <div class="h-full flex flex-col">
                 <article class="flex flex-col lg:flex-row max-w-screen-xl bg-[#272727] ">
                     <div class="text-white p-5 sm:min-w-0 lg:min-w-[20rem] basis-96 md:sticky md:top-20 h-2/4">
                         <div class="flex flex-row lg:flex-col justify-around">
-                            <picture>
-                                <source srcset="AVATARA_CV_100.png" media="(max-width: 320px)">
-                                <source srcset="AVATARA_CV_125.png" media="(max-width: 680px)">
-                                <source srcset="AVATARA_CV_250.png" media="(max-width: 768px)">
-    <!--                            <source srcset="AVATARA_CV.png" media="(min-width: 2000px)">-->
-                                <img alt="avatar" srcset="AVATARA_CV.png">
-                            </picture>
+                            <div id="animated-thumbnails">
+                                <a href="AVATARA_CV.png">
+                                    <picture>
+                                        <source srcset="AVATARA_CV_100.png" media="(max-width: 320px)">
+                                        <source srcset="AVATARA_CV_125.png" media="(max-width: 680px)">
+                                        <source srcset="AVATARA_CV_250.png" media="(max-width: 768px)">
+                                        <img alt="Klymenko.O." srcset="AVATARA_CV_250.png">
+                                    </picture>
+                                </a>
+                            </div>
                             <h3 class="text-center font-['Gabriela'] text-2xl sm:text-4xl mt-5 mb-5 w-28 sm:w-48 md:w-full flex items-center">Олексій Клименко</h3>
                         </div>
                         <aside class="p-4 mt-5 outline outline-offset-4 outline-2 border-solid border-2 border-white rounded-2xl font-['Comfortaa']">
@@ -120,6 +126,22 @@
                                 базовий (читання документації, технічний переклад з періодичним використанням словника/Google Translate)
                             </section>
                         </div>
+
+<!--                        <div class="parent-container" >-->
+<!--                            <a href="AVATARA_CV_125.png">Open popup 1</a>-->
+<!--                            <a href="AVATARA_CV_250.png">Open popup 2</a>-->
+<!--                        </div>-->
+<!--                        <a href="#test-popup" class="open-popup-link">Show inline popup</a>-->
+
+                        <button
+                                class="btn btn-success btn-lg mrb50"
+                                data-iframe="true"
+                                id="open-website"
+                                data-src="https://onedrive.live.com/embed?cid=4133D6A2F1D1BE8C&resid=4133D6A2F1D1BE8C%2182432&authkey=AMqcqW37R_rLkNA&em=2"
+                                data-iframe-title="All new time tracking. Greater insight."
+                        >
+                            Open presentation
+                        </button>
                     </main>
                 </article>
             </div>
@@ -134,5 +156,34 @@
                 </div>
             </footer>
         </div>
+
+<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+<!--        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js" integrity="sha512-C1zvdb9R55RAkl6xCLTPt+Wmcz6s+ccOvcr6G57lbm8M2fbgn2SUjUJbQ13fEyjuLViwe97uJvwa1EUf4F1Akw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+
+<!--        <script>-->
+<!--            $('.parent-container').magnificPopup({-->
+<!--                delegate: 'a', // child items selector, by clicking on it popup will open-->
+<!--                type: 'image'-->
+<!--                // other options-->
+<!--            });-->
+<!--            $('.open-popup-link').magnificPopup({-->
+<!--                type:'inline',-->
+<!--                midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.-->
+<!--            });-->
+<!--        </script>-->
+<!---->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js" integrity="sha512-FDbnUqS6P7md6VfBoH57otIQB3rwZKvvs/kQ080nmpK876/q4rycGB0KZ/yzlNIDuNc+ybpu0HV3ePdUYfT5cA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/thumbnail/lg-thumbnail.umd.min.js" integrity="sha512-hdzLQVAURjMzysJVkWaKWA2nD+V6CcBx6wH0aWytFnlmgIdTx/n5rDWoruSvK6ghnPaeIgwKuUESlpUhat2X+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script>
+
+            lightGallery(document.getElementById('open-website'), {
+                selector: 'this',
+            });
+
+            lightGallery(document.getElementById('animated-thumbnails'), {
+                thumbnail: true,
+            });
+
+        </script>
     </body>
 </html>
