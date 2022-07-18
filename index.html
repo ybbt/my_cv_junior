@@ -32,6 +32,18 @@
 
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>-->
 
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        'psm': '400px',
+                    },
+                }
+            }
+        }
+    </script>
+
 </head>
 <body class="lg:flex flex-col items-center h-full">
 <div class="min-h-full flex flex-col items-center min-h-screen justify-between bg-[#272727] print:bg-gray-200">
@@ -41,11 +53,11 @@
         </h1>
     </header>
     <div class="h-full flex flex-col">
-        <article class="flex flex-col lg:flex-row print:flex-row max-w-screen-xl bg-[#272727] print:bg-gray-200">
+        <article class="flex flex-col lg:flex-row print:flex-col print:psm:flex-row max-w-screen-xl bg-[#272727] print:bg-gray-200">
             <div class="text-white print:text-black p-5 sm:min-w-0 lg:min-w-[20rem] basis-96 print:basis-auto print:min-w-[35%] md:sticky md:top-20 h-2/4">
                 <div class="flex flex-row lg:flex-col print:flex-col justify-around">
                     <div id="animated-thumbnails" class="flex justify-center">
-                        <img src="AVATARA_print_sm.png" alt="" class="hidden print:block print:rounded-md print:p-2 print:border print:border-2 print:border-black">
+                        <img src="AVATARA_print_sm.png" alt="" class="hidden print:block print:rounded-md print:p-2 print:border print:border-2 print:border-black w-32">
                         <a href="AVATARA_CV.png" class="print:hidden">
                             <picture>
                                 <source srcset="AVATARA_CV_100.png" media="(max-width: 320px)">
@@ -207,40 +219,40 @@
                             <div id="accordion-flush-body-1" class="hidden print:hidden" aria-labelledby="accordion-flush-heading-1">
                                 <div class="inline-gallery-container w-full h-0 pb-[150%] lg:pb-[100%]" id="inline-gallery-container">
                                     <a href="Codex/codex_01.jpg" class="hidden">
-                                        <img src="Codex/codex_01.jpg" alt="hobby-photo">
+                                        <img src="Codex/codex_01.jpg" alt="">
                                     </a>
                                     <a href="Codex/codex_02.jpg" class="hidden">
-                                        <img src="Codex/codex_02.jpg" alt="hobby-photo">
+                                        <img src="Codex/codex_02.jpg" alt="">
                                     </a>
                                     <a href="Codex/codex_03.jpg" class="hidden">
-                                        <img src="Codex/codex_03.jpg" alt="hobby-photo">
+                                        <img src="Codex/codex_03.jpg" alt="">
                                     </a>
                                     <a href="Codex/codex_04.jpg" class="hidden">
-                                        <img src="Codex/codex_04.jpg" alt="hobby-photo">
+                                        <img src="Codex/codex_04.jpg" alt="">
                                     </a>
                                     <a href="Codex/codex_05.jpg" class="hidden">
-                                        <img src="Codex/codex_05.jpg" alt="hobby-photo">
+                                        <img src="Codex/codex_05.jpg" alt="">
                                     </a>
                                     <a href="Codex/codex_06.jpg" class="hidden">
-                                        <img src="Codex/codex_06.jpg" alt="hobby-photo">
+                                        <img src="Codex/codex_06.jpg" alt="">
                                     </a>
                                     <a href="Codex/codex_07.jpg" class="hidden">
-                                        <img src="Codex/codex_07.jpg" alt="hobby-photo">
+                                        <img src="Codex/codex_07.jpg" alt="">
                                     </a>
                                     <a href="Codex/codex_08.jpg" class="hidden">
-                                        <img src="Codex/codex_08.jpg" alt="hobby-photo">
+                                        <img src="Codex/codex_08.jpg" alt="">
                                     </a>
                                     <a href="Codex/codex_09.jpg" class="hidden">
-                                        <img src="Codex/codex_09.jpg" alt="hobby-photo">
+                                        <img src="Codex/codex_09.jpg" alt="">
                                     </a>
                                     <a href="Codex/codex_10.jpg" class="hidden">
-                                        <img src="Codex/codex_10.jpg" alt="hobby-photo">
+                                        <img src="Codex/codex_10.jpg" alt="">
                                     </a>
                                     <a href="Codex/codex_11.jpg" class="hidden">
-                                        <img src="Codex/codex_11.jpg" alt="hobby-photo">
+                                        <img src="Codex/codex_11.jpg" alt="">
                                     </a>
                                     <a href="Codex/codex_12.jpg" class="hidden">
-                                        <img src="Codex/codex_12.jpg" alt="hobby-photo">
+                                        <img src="Codex/codex_12.jpg" alt="">
                                     </a>
 
                                 </div>
@@ -263,55 +275,55 @@
                             <div id="accordion-flush-body-2" class="hidden print:hidden" aria-labelledby="accordion-flush-heading-2">
                                 <div id="customize-thumbnails-gallery">
                                     <a href="Photo/photo_01.jpg">
-                                        <img src="Photo/photo_01.jpg" alt="photo">
+                                        <img src="Photo/photo_01.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_02.jpg">
-                                        <img src="Photo/photo_02.jpg" alt="photo">
+                                        <img src="Photo/photo_02.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_03.jpg">
-                                        <img src="Photo/photo_03.jpg" alt="photo">
+                                        <img src="Photo/photo_03.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_04.jpg">
-                                        <img src="Photo/photo_04.jpg" alt="photo">
+                                        <img src="Photo/photo_04.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_05.jpg">
-                                        <img src="Photo/photo_05.jpg" alt="photo">
+                                        <img src="Photo/photo_05.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_06.jpg">
-                                        <img src="Photo/photo_06.jpg" alt="photo">
+                                        <img src="Photo/photo_06.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_07.jpg">
-                                        <img src="Photo/photo_07.jpg" alt="photo">
+                                        <img src="Photo/photo_07.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_08.jpg">
-                                        <img src="Photo/photo_08.jpg" alt="photo">
+                                        <img src="Photo/photo_08.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_09.jpg">
-                                        <img src="Photo/photo_09.jpg" alt="photo">
+                                        <img src="Photo/photo_09.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_10.jpg">
-                                        <img src="Photo/photo_10.jpg" alt="photo">
+                                        <img src="Photo/photo_10.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_11.jpg">
-                                        <img src="Photo/photo_11.jpg" alt="photo">
+                                        <img src="Photo/photo_11.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_12.jpg">
-                                        <img src="Photo/photo_12.jpg" alt="photo">
+                                        <img src="Photo/photo_12.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_13.jpg">
-                                        <img src="Photo/photo_13.jpg" alt="photo">
+                                        <img src="Photo/photo_13.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_14.jpg">
-                                        <img src="Photo/photo_14.jpg" alt="photo">
+                                        <img src="Photo/photo_14.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_15.jpg">
-                                        <img src="Photo/photo_15.jpg" alt="photo">
+                                        <img src="Photo/photo_15.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_16.jpg">
-                                        <img src="Photo/photo_16.jpg" alt="photo">
+                                        <img src="Photo/photo_16.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_17.jpg">
-                                        <img src="Photo/photo_16.jpg" alt="photo">
+                                        <img src="Photo/photo_16.jpg" alt="">
                                     </a>
 
                                 </div>
