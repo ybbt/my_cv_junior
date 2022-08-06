@@ -30,6 +30,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.19.1/dist/full.css" rel="stylesheet" type="text/css" />
+
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>-->
 
     <script>
@@ -54,24 +56,26 @@
     </header>
     <div class="h-full flex flex-col">
         <article class="flex flex-col lg:flex-row print:flex-col print:psm:flex-row max-w-screen-xl bg-[#272727]">
-            <div class="text-white p-5 sm:min-w-0 lg:min-w-[20rem] basis-96 print:basis-auto print:min-w-[30%] md:sticky md:top-20 h-2/4">
+            <div class="text-white p-5 sm:min-w-0 lg:min-w-[20rem] basis-96 print:basis-auto print:min-w-[35%] md:sticky md:top-20 h-2/4">
                 <div class="flex flex-row lg:flex-col print:flex-col justify-around">
-                    <div id="animated-thumbnails" class="flex justify-center">
-                        <a href="AVATARA_CV.png">
-                            <picture>
-                                <source srcset="AVATARA_CV_100.png" media="(max-width: 320px)">
-                                <source srcset="AVATARA_CV_125.png" media="(max-width: 680px)">
-                                <source srcset="AVATARA_CV_250.png" media="(max-width: 768px)">
-                                <img alt="Klymenko.O." src="AVATARA_CV_250.png">
-                            </picture>
-                        </a>
-                    </div>
+
+
+                            <div id="animated-thumbnails" class="flex justify-center">
+                                <a href="AVATARA_CV.jpg" >
+                                    <picture class="w-full">
+                                        <source srcset="AVATARA_CV_100.jpg" media="(max-width: 320px)">
+                                        <source srcset="AVATARA_CV_125.jpg" media="(max-width: 680px)">
+                                        <source srcset="AVATARA_CV_250.jpg" media="(max-width: 768px)">
+                                        <source srcset="AVATARA_print.jpeg" media="print">
+                                        <img alt="Klymenko.O." src="AVATARA_CV.png">
+                                    </picture>
+                                </a>
+                            </div>
+
+
                     <h3 class="text-center print:text-center font-['Gabriela'] text-2xl sm:text-4xl mt-5 mb-5 w-28 sm:w-48 md:w-full print:w-full flex items-center">
                         Олексій Клименко
                     </h3>
-                    <div class="hidden print:block mb-2">
-                        <a href="http://ybbt.github.io/my_cv_junior">ybbt.github.io/my_cv_junior</a>
-                    </div>
                 </div>
                 <aside class="p-4 mt-5 outline outline-offset-4 outline-2 border-solid border-2 border-white rounded-2xl font-['Comfortaa'] break-inside-avoid">
                     <div class="flex flex-wrap print:text-sm">
@@ -188,7 +192,7 @@
                             </li>
                         </ul>
                     </section>
-                    <section class="mt-2 print:text-lg break-inside-avoid print:pb-[55%]">
+                    <section class="mt-2 print:text-lg break-inside-avoid print:pb-[47.5%]">
                         <h1 class="bg-[#528135] font-medium text-3xl print:text-2xl font-['Yeseva_One'] text-white mt-0 mb-2 -ml-9 p-3 pl-6 lg:w-[40rem]">
                             Рівень англійської
                         </h1>
@@ -446,16 +450,12 @@
 
 </script>
 
-
 <!--<script>-->
 <!--    (function () {-->
 <!--        Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.classic.min.js');-->
 <!--        Galleria.run('.galleria');-->
 <!--    }());-->
 <!--</script>-->
-
-
-
 
 </body>
 </html>
