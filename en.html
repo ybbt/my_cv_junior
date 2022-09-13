@@ -8,17 +8,18 @@
     <link rel="icon" type="image/x-icon" href="curriculum-vitae.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Comfortaa&family=Diplomata+SC&family=Fira+Sans&family=Gabriela&family=Philosopher:ital@1&family=Yeseva+One&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Comfortaa&family=Diplomata+SC&family=Fira+Sans&family=Gabriela&family=Philosopher:ital@1&family=Yeseva+One&family=Train+One&display=swap"
           rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lightgallery-bundle.min.css"
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lightgallery-bundle.min.css"
           integrity="sha512-lgRFGedXdci5Ykc5Wbgd8QCzt3lBmnkWcMRAS8myln2eMCDwQBrHmjqvUj9rBcKOyWMC+EYJnvEppggw1v+m8Q=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lg-thumbnail.min.css"
           integrity="sha512-GRxDpj/bx6/I4y6h2LE5rbGaqRcbTu4dYhaTewlS8Nh9hm/akYprvOTZD7GR+FRCALiKfe8u1gjvWEEGEtoR6g=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/css/lg-zoom.min.css"
           integrity="sha512-SGo05yQXwPFKXE+GtWCn7J4OZQBaQIakZSxQSqUyVWqO0TAv3gaF/Vox1FmG4IyXJWDwu/lXzXqPOnfX1va0+A=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.css">
 
 
@@ -26,13 +27,13 @@
           integrity="sha512-WEQNv9d3+sqyHjrqUZobDhFARZDko2wpWdfcpv44lsypsSuMO0kHGd3MQ8rrsBn/Qa39VojphdU6CMkpJUmDVw=="
           crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.19.1/dist/full.css" rel="stylesheet" type="text/css" />
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.19.1/dist/full.css" rel="stylesheet" type="text/css" />
-
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>-->
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/galleria.min.js"></script>-->
 
     <script>
         tailwind.config = {
@@ -48,34 +49,38 @@
 
 </head>
 <body class="lg:flex flex-col items-center h-full">
-<div class="min-h-full flex flex-col items-center min-h-screen justify-between bg-[#272727]">
-    <header class="text-white h-13 leading-5 sm:h-20 print:h-16 pl-10 flex items-center justify-center box-border border-2 border-slate-300 w-full sticky print:static top-0 bg-[#272727] z-10">
-        <h1 class="sm:text-xl md:text-3xl xl:text-5xl print:text-2xl font-bold font-['Diplomata_SC'] uppercase tracking-widest">
+<div class="min-h-full flex flex-col items-center min-h-screen justify-between bg-[#272727] print:bg-gray-200">
+    <header class="text-white h-13 leading-5 sm:h-20 print:hidden pl-10 flex items-center justify-center box-border border-2 border-slate-300 w-full sticky top-0 bg-[#272727] print:bg-gray-200 z-10">
+        <h1 class="sm:text-xl md:text-3xl xl:text-5xl font-bold font-['Train_One'] uppercase tracking-widest">
             Oleksii Klymenko
         </h1>
     </header>
     <div class="h-full flex flex-col">
-        <article class="flex flex-col lg:flex-row print:flex-col print:psm:flex-row max-w-screen-xl bg-[#272727]">
-            <div class="text-white p-5 sm:min-w-0 lg:min-w-[20rem] basis-96 print:basis-auto print:min-w-[35%] md:sticky md:top-20 h-2/4">
+        <article class="flex flex-col lg:flex-row print:flex-col print:psm:flex-row max-w-screen-xl bg-[#272727] print:bg-gray-200">
+            <div class="text-white print:text-black p-5 sm:min-w-0 lg:min-w-[20rem] basis-96 print:basis-auto print:min-w-[35%] md:sticky md:top-20 h-2/4">
                 <div class="flex flex-row lg:flex-col print:flex-col justify-around">
-
-
+                    <div class="avatar">
+                        <img src="AVATARA_print_sm.png" alt="qwerty" class="hidden print:block print:rounded-md print:p-2 print:border print:border-2 print:border-black w-32">
+                        <div class="w-full mask mask-hexagon print:hidden">
                             <div id="animated-thumbnails" class="flex justify-center">
-                                <a href="AVATARA_CV.jpg" >
+                                <a href="AVATARA_CV.jpg" class="print:hidden">
                                     <picture class="w-full">
                                         <source srcset="AVATARA_CV_100.jpg" media="(max-width: 320px)">
                                         <source srcset="AVATARA_CV_125.jpg" media="(max-width: 680px)">
                                         <source srcset="AVATARA_CV_250.jpg" media="(max-width: 768px)">
                                         <source srcset="AVATARA_print.jpeg" media="print">
-                                        <img alt="Klymenko.O." src="AVATARA_CV.png">
+                                        <img alt="Klymenko.O." src="AVATARA_CV.jpg">
                                     </picture>
                                 </a>
                             </div>
-
-
-                    <h3 class="text-center print:text-center font-['Gabriela'] text-2xl sm:text-4xl mt-5 mb-5 w-28 sm:w-48 md:w-full print:w-full flex items-center">
-                        Олексій Клименко
+                        </div>
+                    </div>
+                    <h3 class="text-center print:text-center text-2xl sm:text-4xl mt-5 mb-5 w-28 sm:w-48 md:w-full print:w-full">
+                        Oleksii Klymenko
                     </h3>
+                    <h4 class="text-center print:text-center font-['Gabriela'] text-lg mt-5 mb-5 w-28 sm:w-48 md:w-full print:w-full">
+                        (Олексій Клименко)
+                    </h4>
                 </div>
                 <aside class="p-4 mt-5 outline outline-offset-4 outline-2 border-solid border-2 border-white rounded-2xl font-['Comfortaa'] break-inside-avoid">
                     <div class="flex flex-wrap print:text-sm">
@@ -104,27 +109,28 @@
                 </aside>
 
                 <aside class="mt-8 ml-3 mr-2 break-inside-avoid">
-                    <h6 class="underline font-['Yeseva_One'] text-lg print:text-sm">ТРОХИ ПРО СЕБЕ:</h6>
+                    <h6 class="print:underline font-['Yeseva_One'] text-xl print:text-sm bg-gray-600 px-3">
+                        A LITTLE ABOUT MYSELF:
+                    </h6>
                     <div class="font-['Alumni_Sans'] text-2xl print:text-lg">
-                        В основі мого методу пізнання світу лежить логіка.
-
-                        Якщо щось містить у собі логіку, то рано чи пізно я зможу розібратися, як із цим
-                        працювати.
-
-                        А якщо витратити ще часу, то й розберуся, як це влаштовано.
+                        Logic is the basis of my method of understanding the world.
+                        If something has logic in it, sooner or later I will be able to figure out how to work with it.
+                        And if I spend more time, I will figure out how it is arranged.
                     </div>
                 </aside>
             </div>
-            <main class="grow text-xl font-['Fira_Sans'] print:ml-2">
-                <div class="m-2.5 p-4 bg-[#c5dfb3]">
-                    <section class="pt-2 mb-3 print:text-lg break-inside-avoid">
-                        <h1 class="bg-[#528135] font-medium text-3xl print:text-2xl font-['Yeseva_One'] text-white mt-0 mb-2 -ml-9 p-3 pl-6 lg:w-[40rem]">
-                            Освіта
+            <main class="grow text-xl font-['Fira_Sans'] print:ml-2 print:border print:border-dotted print:border-l-2 print:border-black print:border-0">
+                <div class="m-2.5 p-4 bg-[#c5dfb3] print:bg-white">
+                    <section class="pt-2 mb-3 print:text-base break-inside-avoid">
+                        <h1 class="bg-[#528135] print:bg-white font-medium text-3xl print:text-xl font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 -ml-9 print:ml-1 p-3 pl-6 lg:w-[40rem]
+                            hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000">
+                            Education
                         </h1>
                         <ul class="list-disc list-inside ml-2">
-                            <li>Beetroot Academy - курс Front-End розробки;</li>
+                            <li>Beetroot Academy - Front-End development course;</li>
                             <li>
-                                Компьютерна академія «ШАГ» - розробник програмного забезпечення;
+
+                                IT Step Academy - software developer;
                                 <button
                                         class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800
                                                     focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-1
@@ -135,17 +141,18 @@
                                         data-src="https://onedrive.live.com/embed?cid=4133D6A2F1D1BE8C&resid=4133D6A2F1D1BE8C%2182432&authkey=AMqcqW37R_rLkNA&em=2"
                                         data-iframe-title="All new time tracking. Greater insight."
                                 >
-                                    Презентація
+                                    Presentation
                                 </button>
                             </li>
-                            <li>«Запорізька Державна Инженерна Академія» - інженер-теплоенергетик.</li>
+                            <li>«Zaporizhzhia State Engineering Academy» - thermal-power engineer.</li>
                         </ul>
                     </section>
-                    <section class="mb-3 mt-2 print:text-lg break-inside-avoid">
-                        <h1 class="bg-[#528135] font-medium text-3xl print:text-2xl font-['Yeseva_One'] text-white mt-0 mb-2 -ml-9 p-3 pl-6 lg:w-[40rem]">
-                            Професійні навички
+                    <section class="mb-3 mt-2 print:text-base break-inside-avoid">
+                        <h1 class="bg-[#528135] print:bg-white font-medium text-3xl print:text-xl font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 -ml-9 print:ml-1 p-3 pl-6 lg:w-[40rem]
+                            hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000">
+                            Professional skills
                         </h1>
-                        <h2 class="underline">Основні:</h2>
+                        <h2 class="underline">Main:</h2>
                         <ul class="list-disc list-inside ml-2">
                             <li>
                                 HTML5, CSS3, JavaScript ES6, ООП, Less/SCSS, Pug, Git/GitHub, React.JS, Next.js,
@@ -153,55 +160,68 @@
                                 Node.js, Tailwind
                             </li>
                         </ul>
-                        <h2 class="underline">Додатково:</h2>
-                        <ul class="list-disc list-inside ml-2 mb-2">
+                        <h2 class="underline text-lg print:text-sm mt-4">Additionally:</h2>
+                        <ul class="list-disc list-inside ml-2 mb-2 text-lg print:text-sm">
                             <li>
-                                робота з платформою .Net на мові C# - технології WindowsForms, WPF, системне, мережеве
-                                програмування, WCF, GDI+, ADO.Net,
-                                ASP.Net.
+                                working with the .Net platform in the C# language - WindowsForms, WPF, system, network technologies
+                                programming, WCF, GDI+, ADO.Net, ASP.Net.
                             </li>
-                            <li>C++, мова запитів запросов SQL на базе MS Access, MySQL и MS SQL Server</li>
-                            <li>
-                                вміння працювати з Adobe Photoshop, Adobe Illustrator
-                            </li>
+                            <li>C++, the query language of SQL requests based on MS Access, MySQL and MS SQL Server</li>
+                            <li>ability to work with Adobe Photoshop, Adobe Illustrator</li>
                         </ul>
-                        <p class="italic">Необхідне стажування (для закріплення та розширення навичок, отримання професійного
-                        досвіду, набивання шишок та подальшого зростання до вершин професіоналізму)</p>
+
                     </section>
-                    <section class="mb-3 mt-2 print:text-lg break-inside-avoid">
-                        <h1 class="bg-[#528135] font-medium text-3xl print:text-2xl font-['Yeseva_One'] text-white mt-0 mb-2 -ml-9 p-3 pl-6 lg:w-[40rem]">
-                            Досвід роботи не програмістом
+                    <section class="mb-3 mt-2 print:text-base break-inside-avoid">
+                        <h1 class="bg-[#528135] print:bg-white font-medium text-3xl print:text-xl font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 -ml-9 print:ml-1 p-3 pl-6 lg:w-[40rem]
+                            hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000">
+                            Work experience
                         </h1>
                         <ul class="list-disc list-inside ml-2">
                             <li>
-                                з 2017р. по 2021р. на посаді інженер з ремонту та обслуговування газовикористовуючого та
-                                газоспоживаючого обладнання
-                                <p>Обов'язки:
-                                    Налагодження, обслуговування та ремонт побутових котлів, котлів малої потужності,
-                                    обладнання котелень, вузлів обліку газу та
-                                    газо-розподільних пунктів.</p>
+                                since October 2021 to September 2022 in the position of junior full-stack developer in
+                                <a href="https://rezet.io" class="underline">reZet</a>
                             </li>
-                            <li class="break-inside-avoid">
-                                з 2005р. по 2017р. на посаді інженер-теплоенергетик на підприємстві, що займається
-                                автономним теплопостачанням (проектування,
-                                встановлення, накладка, ремонт автономних котелень, котлів, систем опалення) Обов'язки:
-                                Монтаж котельного обладнання, монтаж
-                                систем опалення та ГВП, монтаж теплових мереж. Підбір обладнання для проектованих
-                                міні-котелень. Налагодження, обслуговування та
-                                ремонт побутових котлів та обладнання автономних міні-котелень.
+
+                        </ul>
+                    </section>
+                    <section class="mb-3 mt-2 print:text-base break-inside-avoid">
+                        <h1 class="bg-[#528135] print:bg-white font-medium text-3xl print:text-xl font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 -ml-9 print:ml-1 p-3 pl-6 lg:w-[40rem]
+                            hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000">
+                            Work experience is not a programmer
+                        </h1>
+                        <ul class="list-disc list-inside ml-2">
+                            <li class="mt-2">
+                                since 2017 to 2021 in the position of an engineer for the repair and maintenance of gas-using and gas-consuming equipment
+                                <p>
+                                    Responsibilities:
+                                    Installation, maintenance and repair of household boilers, low-power boilers, boiler room equipment, gas metering units and gas distribution points.
+                                </p>
+                            </li>
+                            <li class="mt-2">
+                                since 2005 for 2017 in the position of a thermal power engineer at the company engaged in
+                                autonomous heat supply (design,
+                                installation, overlay, repair of autonomous boiler houses, boilers, heating systems)
+                                <p>
+                                    Responsibilities:
+                                    Installation of boiler equipment, installation
+                                    heating and domestic hot water systems, installation of heat networks. Selection of equipment for the designed
+                                    mini boiler room. Debugging, maintenance and
+                                    repair of domestic boilers and equipment of autonomous mini-boilers.
+                                </p>
                             </li>
                         </ul>
                     </section>
-                    <section class="mt-2 print:text-lg break-inside-avoid print:pb-[47.5%]">
-                        <h1 class="bg-[#528135] font-medium text-3xl print:text-2xl font-['Yeseva_One'] text-white mt-0 mb-2 -ml-9 p-3 pl-6 lg:w-[40rem]">
-                            Рівень англійської
+                    <section class="mt-2 print:text-base break-inside-avoid">
+                        <h1 class="bg-[#528135] print:bg-white font-medium text-3xl print:text-xl font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 -ml-9 print:ml-1 p-3 pl-6 lg:w-[40rem]
+                            hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000">
+                            English level
                         </h1>
-                        базовий (читання документації, технічний переклад з періодичним використанням словника/Google
-                        Translate)
+                        basic (reading documentation, technical translation with occasional use of a dictionary/Google Translate)
                     </section>
-                    <section class="mt-2 print:text-lg break-inside-avoid print:hidden">
-                        <h1 class="bg-[#528135] font-medium text-3xl print:text-2xl font-['Yeseva_One'] text-white mt-0 mb-2 -ml-9 p-3 pl-6 lg:w-[40rem]">
-                            Хоббі
+                    <section class="mt-2 print:text-base break-inside-avoid">
+                        <h1 class="bg-[#528135] print:bg-white font-medium text-3xl print:text-xl font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 -ml-9 print:ml-1 p-3 pl-6 lg:w-[40rem]
+                            hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000">
+                            Hobby
                         </h1>
 
                         <div id="accordion-flush" data-accordion="collapse"
@@ -212,7 +232,7 @@
                                         class="flex items-center justify-between w-full py-2.5 pl-3 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
                                         data-accordion-target="#accordion-flush-body-1" aria-expanded="false"
                                         aria-controls="accordion-flush-body-1">
-                                    <span>Палітурництво (Bookbinding)</span>
+                                    <span>Bookbinding</span>
                                     <svg data-accordion-icon class="w-6 h-6 shrink-0  print:hidden" fill="currentColor"
                                          viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -221,8 +241,10 @@
                                     </svg>
                                 </button>
                             </h2>
-                            <div id="accordion-flush-body-1" class="hidden print:hidden" aria-labelledby="accordion-flush-heading-1">
-                                <div class="inline-gallery-container w-full h-0 pb-[150%] lg:pb-[100%]" id="inline-gallery-container">
+                            <div id="accordion-flush-body-1" class="hidden print:hidden"
+                                 aria-labelledby="accordion-flush-heading-1">
+                                <div class="inline-gallery-container w-full h-0 pb-[150%] lg:pb-[100%]"
+                                     id="inline-gallery-container">
                                     <a href="Codex/codex_01.jpg" class="hidden">
                                         <img src="Codex/codex_01.jpg" alt="">
                                     </a>
@@ -268,7 +290,7 @@
                                         class="flex items-center justify-between w-full py-2.5 pl-3 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
                                         data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
                                         aria-controls="accordion-flush-body-2">
-                                    <span>Фотографія</span>
+                                    <span>Photo</span>
                                     <svg data-accordion-icon class="w-6 h-6 shrink-0 print:hidden" fill="currentColor"
                                          viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
@@ -277,7 +299,8 @@
                                     </svg>
                                 </button>
                             </h2>
-                            <div id="accordion-flush-body-2" class="hidden print:hidden" aria-labelledby="accordion-flush-heading-2">
+                            <div id="accordion-flush-body-2" class="hidden print:hidden"
+                                 aria-labelledby="accordion-flush-heading-2">
                                 <div id="customize-thumbnails-gallery">
                                     <a href="Photo/photo_01.jpg">
                                         <img src="Photo/photo_01.jpg" alt="">
@@ -297,9 +320,9 @@
                                     <a href="Photo/photo_06.jpg">
                                         <img src="Photo/photo_06.jpg" alt="">
                                     </a>
-                                    <a href="Photo/photo_07.jpg">
-                                        <img src="Photo/photo_07.jpg" alt="">
-                                    </a>
+<!--                                    <a href="Photo/photo_07.jpg">-->
+<!--                                        <img src="Photo/photo_07.jpg" alt="">-->
+<!--                                    </a>-->
                                     <a href="Photo/photo_08.jpg">
                                         <img src="Photo/photo_08.jpg" alt="">
                                     </a>
@@ -328,7 +351,10 @@
                                         <img src="Photo/photo_16.jpg" alt="">
                                     </a>
                                     <a href="Photo/photo_17.jpg">
-                                        <img src="Photo/photo_16.jpg" alt="">
+                                        <img src="Photo/photo_17.jpg" alt="">
+                                    </a>
+                                    <a href="Photo/photo_18.jpg">
+                                        <img src="Photo/photo_18.jpg" alt="">
                                     </a>
 
                                 </div>
@@ -340,14 +366,13 @@
             </main>
         </article>
     </div>
-    <footer class="text-white w-full p-3 py-1.5 z-10 flex justify-end grow-0 shrink-0 basis-auto md:sticky md:bottom-0 bg-[#272727]">
+    <footer class="text-white w-full p-3 py-1.5 z-10 flex justify-end grow-0 shrink-0 basis-auto md:sticky md:bottom-0 bg-[#272727] print:bg-transparent">
         <div class="flex border border-2 border-white w-max p-2 bg-zinc-600">
             <div>
                 <h6 class="underline">post scriptum</h6>
-                А ще я знаю, як збирати
-                кубик рубика “3x3x3”.
+                And I also know how to assemble a rubik's cube "3x3x3".
             </div>
-            <img src="rubik.png" alt="rubik" class="w-14 h-14 self-end ml-2">
+            <img src="rubik.png" alt="rubik" class="w-14 h-14 self-end ml-2 print:hidden">
         </div>
     </footer>
 </div>
@@ -361,8 +386,8 @@
         integrity="sha512-hdzLQVAURjMzysJVkWaKWA2nD+V6CcBx6wH0aWytFnlmgIdTx/n5rDWoruSvK6ghnPaeIgwKuUESlpUhat2X+Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/plugins/zoom/lg-zoom.min.js"
-         integrity="sha512-5kOfZonUGdOM0k5LCWttgUTvxceTa3DCwYtH3alvvE+oULFgoIN11oMIoubI1HcOXOmGDuuMvi00Px0HwHZsaQ=="
-         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        integrity="sha512-5kOfZonUGdOM0k5LCWttgUTvxceTa3DCwYtH3alvvE+oULFgoIN11oMIoubI1HcOXOmGDuuMvi00Px0HwHZsaQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.js"></script>
 
 <script>
@@ -450,12 +475,14 @@
 
 </script>
 
+
 <!--<script>-->
 <!--    (function () {-->
 <!--        Galleria.loadTheme('https://cdnjs.cloudflare.com/ajax/libs/galleria/1.5.7/themes/classic/galleria.classic.min.js');-->
 <!--        Galleria.run('.galleria');-->
 <!--    }());-->
 <!--</script>-->
+
 
 </body>
 </html>

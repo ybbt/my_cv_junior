@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="87c3a24d-8c1a-4b6c-b0af-3a4872a11d1c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/en.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/print_a4_en.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/print_a4.html" beforeDir="false" afterPath="$PROJECT_DIR$/print_a4.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2CveFBJ15hPSEevt3fHtKScxIat" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="87c3a24d-8c1a-4b6c-b0af-3a4872a11d1c" name="Changes" comment="" />
+      <created>1659687380179</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659687380179</updated>
+      <workItem from="1659687381578" duration="233000" />
+      <workItem from="1659687623653" duration="1144000" />
+      <workItem from="1659762804206" duration="867000" />
+      <workItem from="1659928860985" duration="607000" />
+      <workItem from="1660139863163" duration="599000" />
+      <workItem from="1660144189519" duration="22000" />
+      <workItem from="1660588698198" duration="601000" />
+      <workItem from="1660719604830" duration="2194000" />
+      <workItem from="1661170092704" duration="672000" />
+      <workItem from="1661183262685" duration="617000" />
+      <workItem from="1662118143231" duration="6000" />
+      <workItem from="1662494961637" duration="139000" />
+      <workItem from="1662673145868" duration="1373000" />
+      <workItem from="1662725389216" duration="1076000" />
+      <workItem from="1663072597518" duration="9595000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add hexagon avatar mask" />
+  </component>
+</project>
