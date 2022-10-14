@@ -73,7 +73,10 @@
             </header>
             <div class="h-full flex flex-col">
                 <article class="flex flex-col lg:flex-row print:flex-col print:psm:flex-row max-w-screen-xl bg-[#272727]">
-                    <div class="text-white p-5 sm:min-w-0 lg:min-w-[20rem] basis-96 print:basis-auto print:min-w-[35%] md:sticky md:top-20 h-2/4">
+                    <div
+                        id="left_side"
+                        class="text-white p-5 sm:min-w-0 lg:min-w-[20rem] basis-96 print:basis-auto print:min-w-[35%] md:sticky md:top-20 h-2/4"
+                    >
                         <div class="flex flex-row lg:flex-col print:flex-col justify-around">
                             <div id="animated-thumbnails" class="flex justify-center">
                                 <a href="AVATARA_CV.jpg">
@@ -501,5 +504,18 @@
         <!--        Galleria.run('.galleria');-->
         <!--    }());-->
         <!--</script>-->
+
+        <script>
+            $(function () {
+                if ($('#print-qr').length == 0) {
+                    $('#left_side').append(
+                        '<style>@media screen {#print-qr{display: none;}}</style>' +
+                            '<div id="print-qr" class="flex justify-center mt-52"><img src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&choe=UTF-8&chld=H&chl=' +
+                            'https://ybbt.github.io/my_cv_junior/' +
+                            '"></div>'
+                    );
+                }
+            });
+        </script>
     </body>
 </html>

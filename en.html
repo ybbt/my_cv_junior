@@ -66,13 +66,24 @@
     <body class="lg:flex flex-col items-center h-full">
         <div class="min-h-full flex flex-col items-center min-h-screen justify-between bg-[#272727] print:bg-gray-200">
             <header
-                class="text-white h-13 leading-5 sm:h-20 print:hidden pl-10 flex items-center justify-center box-border border-2 border-slate-300 w-full sticky top-0 bg-[#272727] print:bg-gray-200 z-10"
+                class="text-white h-13 leading-5 sm:h-20 print:hidden pl-10 flex items-center justify-around box-border border-2 border-slate-300 w-full sticky top-0 bg-[#272727] print:bg-gray-200 z-10"
             >
                 <h1 class="sm:text-xl md:text-3xl xl:text-5xl font-bold font-['Train_One'] uppercase tracking-widest">Oleksii Klymenko</h1>
+                <div class="dropdown dropdown-end hidden lg:inline">
+                    <label tabindex="0" class="btn m-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </label>
+                    <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a href="#" class="action-print text-black">Print</a></li>
+                    </ul>
+                </div>
             </header>
             <div class="h-full flex flex-col">
                 <article class="flex flex-col lg:flex-row print:flex-col print:psm:flex-row max-w-screen-xl bg-[#272727] print:bg-gray-200">
                     <div
+                        id="left_side"
                         class="text-white print:text-black p-5 sm:min-w-0 lg:min-w-[20rem] basis-96 print:basis-auto print:min-w-[35%] md:sticky md:top-20 h-2/4"
                     >
                         <div class="flex flex-row lg:flex-col print:flex-col justify-around">
@@ -130,7 +141,7 @@
                         </aside>
 
                         <aside class="mt-8 ml-3 mr-2 break-inside-avoid">
-                            <h6 class="print:underline font-['Yeseva_One'] text-xl print:text-sm bg-gray-600 px-3">A LITTLE ABOUT MYSELF:</h6>
+                            <h6 class="print:underline font-['Yeseva_One'] text-xl print:text-sm print:text-white bg-gray-600 px-3">A LITTLE ABOUT MYSELF:</h6>
                             <div class="font-['Alumni_Sans'] text-2xl print:text-lg">
                                 Logic is the basis of my method of understanding the world. If something has logic in it, sooner or later I will be able to
                                 figure out how to work with it. And if I spend more time, I will figure out how it is arranged.
@@ -520,5 +531,28 @@
         <!--        Galleria.run('.galleria');-->
         <!--    }());-->
         <!--</script>-->
+
+        <script>
+            $(function ($) {
+                $('.action-print').click(function () {
+                    window.print();
+
+                    return false;
+                });
+            });
+        </script>
+
+        <script>
+            $(function () {
+                if ($('#print-qr').length == 0) {
+                    $('#left_side').append(
+                        '<style>@media screen {#print-qr{display: none;}}</style>' +
+                            '<p id="print-qr" class="flex justify-center mt-8"><img class="w-40" src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&choe=UTF-8&chld=H&chl=' +
+                            window.location.href +
+                            '"></p>'
+                    );
+                }
+            });
+        </script>
     </body>
 </html>
