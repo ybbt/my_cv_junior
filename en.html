@@ -153,8 +153,8 @@
                             </div>
                         </aside>
 
-                        <aside class="mt-5 -ml-2 mr-2 break-inside-avoid hidden text-sm print:text-xs print:flex justify-center">
-                            <p>http://ybbt.github.io/<br/>my_cv_junior/en.html</p>
+                        <aside class="mt-5 -ml-2 mr-2 break-inside-avoid hidden text-sm print:text-xs print:block">
+                            <p id="pageLink" class="break-all text-center"></p>
                         </aside>
                     </div>
                     <main
@@ -216,7 +216,7 @@
                                 <ul class="list-disc list-inside ml-2">
                                     <li>
                                         since October 2021 to September 2022 in the position of junior full-stack web developer in
-                                        <a href="https://rezet.io" class="underline">reZet</a>
+                                        <a href="https://rezet.io" class="underline">REZET</a>
                                     </li>
                                 </ul>
                             </section>
@@ -568,6 +568,10 @@
                     );
                 }
             });
+        </script>
+
+        <script>
+            $('#pageLink').append(window.location.href);
         </script>
     </body>
 </html>

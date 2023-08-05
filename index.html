@@ -64,7 +64,7 @@
         </script>
     </head>
     <body class="lg:flex flex-col items-center h-full">
-        <div class="flex flex-col items-center justify-between bg-[#272727] print:h-[70rem] print:bg-gray-200">
+        <div class="flex flex-col items-center justify-between bg-[#272727] print:h-[65rem] print:bg-gray-200">
             <header
                 class="text-white h-13 leading-5 sm:h-20 print:hidden pl-10 flex items-center justify-around box-border border-2 border-slate-300 w-full sticky top-0 bg-[#272727] print:bg-gray-200 z-10"
             >
@@ -150,6 +150,10 @@
                                 цим працювати. А якщо витратити ще часу, то й розберуся, як це влаштовано.
                             </div>
                         </aside>
+
+                        <aside class="mt-5 -ml-2 mr-2 break-inside-avoid hidden text-sm print:text-xs print:block">
+                            <p id="pageLink" class="break-all text-center"></p>
+                        </aside>
                     </div>
                     <main
                         class="grow text-xl font-['Fira_Sans'] print:ml-2 print:border-dotted print:border-l-2 print:border-black"
@@ -208,7 +212,7 @@
                                     Досвід роботи
                                 </h1>
                                 <ul class="list-disc list-inside ml-2 mb-4">
-                                    <li>з жовтня 2021р. по вересень 2022р. на посаді Junior Full-Stack Web developer</li>
+                                    <li>з жовтня 2021р. по вересень 2022р. на посаді Junior Full-Stack Web developer в <a href="https://rezet.io" class="underline">REZET</a></li>
                                 </ul>
                             </section>
                             <section class="mb-3 mt-2 print:mt-0 print:text-sm break-inside-avoid">
@@ -556,6 +560,10 @@
                     );
                 }
             });
+        </script>
+
+        <script>
+            $('#pageLink').append(window.location.href);
         </script>
     </body>
 </html>

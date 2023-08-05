@@ -157,8 +157,8 @@
                             </div>
                         </aside>
 
-                        <aside class="mt-5 -ml-2 mr-2 break-inside-avoid hidden text-sm print:text-xs print:flex justify-center">
-                            <p>http://ybbt.github.io/<br/>my_cv_junior/pl.html</p>
+                        <aside class="mt-5 -ml-2 mr-2 break-inside-avoid hidden text-sm print:text-xs print:block">
+                            <p id="pageLink" class="break-all text-center"></p>
                         </aside>
                     </div>
                     <main
@@ -568,6 +568,10 @@
                     );
                 }
             });
+        </script>
+
+        <script>
+            $('#pageLink').append(window.location.href);
         </script>
     </body>
 </html>
