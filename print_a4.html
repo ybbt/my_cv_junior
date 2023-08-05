@@ -69,7 +69,7 @@
                 class="text-white h-13 leading-5 sm:h-20 print:h-16 pl-10 flex flex-col items-center justify-center box-border border-2 border-slate-300 w-full sticky print:static top-0 bg-[#272727] z-10"
             >
                 <h1 class="sm:text-xl md:text-3xl xl:text-5xl print:text-2xl font-bold font-['Diplomata_SC'] uppercase tracking-widest">Oleksii Klymenko</h1>
-                <div id="pageLink"></div>
+                <div id="pageLink">https://ybbt.github.io/my_cv_junior/</div>
             </header>
             <div class="h-full flex flex-col">
                 <article class="flex flex-col lg:flex-row print:flex-col print:psm:flex-row max-w-screen-xl bg-[#272727]">
@@ -512,15 +512,15 @@
                     $('#left_side').append(
                         '<style>@media screen {#print-qr{display: none;}}</style>' +
                             '<div id="print-qr" class="flex justify-center mt-52 pt-3"><img src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&choe=UTF-8&chld=H&chl=' +
-                            window.location.href +
+                            'https://ybbt.github.io/my_cv_junior/' +
                             '"></div>'
                     );
                 }
             });
         </script>
 
-        <script>
+        <!-- <script>
             $('#pageLink').append(window.location.href);
-        </script>
+        </script> -->
     </body>
 </html>
