@@ -58,17 +58,28 @@
                         screens: {
                             psm: '400px',
                         },
+                        fontSize: {
+                            'root-print': '30px',
+                        }
                     },
                 },
             };
         </script>
+
+        <style>
+            @media print {
+                html {
+                    font-size: 22px;
+                }
+            }
+        </style>
     </head>
     <body class="lg:flex flex-col items-center h-full">
         <div class="flex flex-col items-center justify-between bg-[#272727] print:h-[65rem] print:bg-gray-200">
             <header
                 class="text-white h-13 leading-5 sm:h-20 print:hidden pl-10 flex items-center justify-around box-border border-2 border-slate-300 w-full sticky top-0 bg-[#272727] print:bg-gray-200 z-10"
             >
-                <h1 class="sm:text-xl md:text-3xl xl:text-5xl font-bold font-['Diplomata_SC'] uppercase tracking-widest">Oleksii Klymenko</h1>
+                <h1 class="sm:text-xl md:text-3xl xl:text-5xl font-bold font-['Diplomata_SC'] uppercase tracking-widest" id="welcome">Oleksii Klymenko</h1>
                 <div class="dropdown dropdown-end hidden lg:inline">
                     <label tabindex="0" class="btn m-1">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current">
@@ -77,15 +88,15 @@
                     </label>
                     <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a href="#" class="action-print text-black">Роздрукувати</a></li>
-                        <!-- <li><a href="en.html" class="text-black">English</a></li>
-                        <li><a href="pl.html" class="text-black">Polski</a></li> -->
+                        <li><btn href="en.html" class="text-black" onclick="changeLanguage('en')">English</btn></li>
+                        <!-- <li><a href="pl.html" class="text-black">Polski</a></li> -->
                     </ul>
                 </div>                
             </header>
             <div class="h-full flex flex-col">
                 <article class="flex flex-col lg:flex-row print:flex-col print:psm:flex-row max-w-screen-xl bg-[#272727] print:bg-gray-200">
                     <div
-                        class="text-white print:text-black p-5 sm:min-w-0 lg:min-w-[20rem] basis-96 print:min-w-[26%] md:sticky md:top-20 h-2/4"
+                        class="text-white print:text-black p-5 sm:min-w-0 lg:min-w-[20rem] basis-96 print:w-[800px] md:sticky md:top-20 h-2/4"
                         id="left_side"
                     >
                         <div class="flex flex-row lg:flex-col print:flex-col justify-around">
@@ -121,31 +132,31 @@
                             <div class="flex flex-wrap print:text-sm">
                                 <div class="grow">
                                     <div class="p-2">
-                                        <h6 class="underline">Email:</h6>
-                                        <div>olexiy.k@i.ua</div>
+                                        <h6 class="underline" id="email_title">Email:</h6>
+                                        <div id="email">olexiy.k@i.ua</div>
                                     </div>
                                     <div class="p-2">
-                                        <h6 class="underline">Тел.:</h6>
-                                        <div>+38-066-612-68-71</div>
-                                        <div>+38-096-395-33-45</div>
+                                        <h6 class="underline" id="phone_title">Тел.:</h6>
+                                        <div id="phone1">+38-066-612-68-71</div>
+                                        <div id="phone2">+38-096-395-33-45</div>
                                     </div>
                                 </div>
                                 <div class="grow">
                                     <div class="p-2">
-                                        <h6 class="underline">Telegram:</h6>
-                                        <div>+38-066-612-68-71</div>
+                                        <h6 class="underline" id="telegram_title">Telegram:</h6>
+                                        <div id="telegram1">+38-066-612-68-71</div>
                                     </div>
                                     <div class="p-2">
-                                        <h6 class="underline">Viber:</h6>
-                                        <div>+38-066-612-68-71</div>
+                                        <h6 class="underline" id="viber_title">Viber:</h6>
+                                        <div id="viber1">+38-066-612-68-71</div>
                                     </div>
                                 </div>
                             </div>
                         </aside>
 
                         <aside class="mt-8 ml-3 mr-2 break-inside-avoid">
-                            <h6 class="underline font-['Yeseva_One'] text-lg print:text-sm">ТРОХИ ПРО СЕБЕ:</h6>
-                            <div class="font-['Alumni_Sans'] text-2xl print:text-base text-justify">
+                            <h6 class="underline font-['Yeseva_One'] text-lg print:text-sm" id="about_myself_title">ТРОХИ ПРО СЕБЕ:</h6>
+                            <div class="font-['Alumni_Sans'] text-2xl print:text-base text-justify" id="about_myself">
                                 В основі мого методу пізнання світу лежить логіка. Якщо щось містить у собі логіку, то рано чи пізно я зможу розібратися, як із
                                 цим працювати. А якщо витратити ще часу, то й розберуся, як це влаштовано.
                             </div>
@@ -156,7 +167,7 @@
                         </aside>
                     </div>
                     <main
-                        class="grow text-xl font-['Fira_Sans'] print:ml-2 print:border-dotted print:border-l-2 print:border-black"
+                        class="grow text-xl font-['Fira_Sans'] print:ml-2 print:border-dotted print:border-l-2 print:border-black print:max-w-[70%]"
                     >
                         <div class="m-2.5 p-4 bg-[#c5dfb3] print:bg-white">
                             <section class="pt-2 mb-3 print:text-sm break-inside-avoid">
@@ -454,6 +465,233 @@
             referrerpolicy="no-referrer"
         ></script>
         <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.js"></script>
+
+        <!-- Підключення i18n з jsDelivr CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/i18next@19.8.3/dist/umd/i18next.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/i18next-xhr-backend@3.2.2/dist/umd/i18nextXHRBackend.min.js"></script>
+
+        <!-- Ваш JavaScript код з використанням i18n -->
+        <script>
+            // Функція для отримання значення параметра з адресного рядка
+            function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[[\]]/g, '\\$&');
+            const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+            }
+
+            // Визначення поточної мови з параметра адресного рядка або значення за замовчуванням
+            const lang = getParameterByName('lang') || 'uk'; // Виберіть мову за замовчуванням
+
+            // Ініціалізація i18n
+            i18next.init({
+            lng: lang, // Виберіть потрібну мову
+            debug: true,
+            resources: {
+	en: {
+		translation: {
+			welcome: 'web developer',
+			contact: {
+				firstName: 'Oleksii',
+				lastName: 'Klymenko',
+				email: {
+					title: 'Email',
+					email1: 'olexiy.k.dev@gmail.com',
+				},				
+				telephoneNumber : {
+					title: 'Telephone',
+					tel1: '+48-452-291-818',
+					tel2: '+38-096-395-33-45',
+				},				
+				telegram: {
+					title: 'Telegram',
+					telegram1: '+38-066-612-68-71',
+				},
+				viber: {
+					title: 'Viber',
+					viber1: '+38-066-612-68-71',
+				}				
+			},
+			aboutMyself: {
+				title: 'A LITTLE ABOUT MYSELF:',
+				content: 'Logic is the basis of my method of understanding the world. If something has logic in it, sooner or later I will be able to figure out how to work with it. And if I spend more time, I will figure out how it is arranged.'
+			},
+			education: {
+				title: 'Education:',
+				education1: 'Beetroot Academy - Front-End development course;',
+				education2: 'IT Step Academy - software developer;',
+				education3: '«Zaporizhzhia State Engineering Academy» - thermal-power engineer.',
+				buttonPresentation: 'Presentation'
+			},
+			skillsProfessional: {
+				title: 'Основні',
+				main: {
+					title: 'HTML5, CSS3, JavaScript ES6, ООП, Less/SCSS, Pug, Git/GitHub, Tailwind, Bootstrap',
+					skill1: 'React.JS, Next.js, React-Redux, Redux-Thunk, RTK Query',
+					skill2: 'Laravel, Wordpress, Laravel-Inertia-Vue, Node.js',
+					skill3: 'the query language of SQL requests based on MS Access, MySQL and MS SQL Server'
+				},
+				additionally: {
+					title: 'Additionally',
+					skill1: 'working with the .Net platform in the C# language - WindowsForms, WPF, system programming, network programming, WCF, GDI+, ADO.Net, ASP.Net',
+					skill2: 'C++',
+					skill3: 'ability to work with Adobe Photoshop, Adobe Illustrator',
+				}				
+			},
+			workExperience: {
+				title: 'Work experience',
+				experience1: 'since October 2021 to September 2022 in the position of junior full-stack web developer in REZET',
+			},
+			workExperienceNotProgrammer: {
+				title: '',
+				experience1: 'since 2017 to 2021 in the position of an engineer for the repair and maintenance of gas-using and gas-consuming equipment',				
+				experience2: 'since 2005 for 2017 in the position of a thermal power engineer at the company engaged in autonomous heat supply (design, installation, overlay, repair of autonomous boiler houses, boilers, heating systems)',
+				responsibilities: {
+					title: 'Responsibilities:',
+					responsibility1: 'Installation, maintenance and repair of household boilers, low-power boilers, boiler room equipment, gas metering units and gas distribution points.',
+					responsibility2: 'Installation of boiler equipment, installation heating and domestic hot water systems, installation of heat networks. Selection of equipment for the designed mini boiler room. Debugging, maintenance and repair of domestic boilers and equipment of autonomous mini-boilers.',
+				}
+			},
+			englishLevel: {
+				title: 'Level of English',
+				content: 'basic (reading documentation, technical translation with occasional use of a dictionary/Google Translate)'
+			},
+			hobby: {
+				title: 'Hobby',
+				hobby1: 'Photography',
+				hobby2: 'Bookbinding'				
+			},
+			postScriptum: "And I also know how to assemble a Rubik's Cube '3x3x3'."
+		}
+	},
+	uk: {
+		translation: {
+			welcome: 'web developer',
+			contact: {
+				firstName: 'Олексій',
+				lastName: 'Клименко',
+				email: {
+					title: 'Email',
+					email1: 'olexiy.k@i.ua',
+				},
+				telephoneNumber : {
+					title: 'Тел.',
+					tel1: '+38-066-612-68-71',
+					tel2: '+38-096-395-33-45',
+				},
+				telegram: {
+					title: 'Telegram',
+					telegram1: '+38-066-612-68-71',
+				},
+				viber: {
+					title: 'Viber',
+					viber1: '+38-066-612-68-71',
+				}
+			},
+			aboutMyself: {
+				title: 'ТРОХИ ПРО СЕБЕ:',
+				content: 'В основі мого методу пізнання світу лежить логіка. Якщо щось містить у собі логіку, то рано чи пізно я зможу розібратися, як із цим працювати. А якщо витратити ще часу, то й розберуся, як це влаштовано'
+			},
+			education: {
+				title: 'Освіта:',
+				education1: 'Beetroot Academy - курс Front-End розробки;',
+				education2: 'Компьютерна академія «ШАГ» - розробник програмного забезпечення;',
+				education3: '«Запорізька Державна Інженерна Академія» - інженер-теплоенергетик.',
+				buttonPresentation: 'Презентація'
+			},
+			skillsProfessional: {
+				title: 'Основні',
+				main: {
+					title: 'HTML5, CSS3, JavaScript ES6, ООП, Less/SCSS, Pug, Git/GitHub, Tailwind, Bootstrap',
+					skill1: 'React.JS, Next.js, React-Redux, Redux-Thunk, RTK Query',
+					skill2: 'Laravel, Wordpress, Laravel-Inertia-Vue, Node.js',
+					skill3: 'мова запитів SQL на базі MS Access, MySQL и MS SQL Server'
+				},
+				additionally: {
+					title: 'Додатково',
+					skill1: 'робота з платформою .Net на мові C# - технології WindowsForms, WPF, системне, мережеве програмування, WCF, GDI+, ADO.Net, ASP.Net',
+					skill2: 'основи C++',
+					skill3: 'вміння працювати з Adobe Photoshop, Adobe Illustrator',
+				}				
+			},
+			workExperience: {
+				title: 'Досвід роботи',
+				experience1: 'з жовтня 2021р. по вересень 2022р. на посаді Junior Full-Stack Web developer в REZET'
+			},
+			workExperienceNotProgrammer: {
+				title: '',
+				experience1: 'з 2017р. по 2021р. на посаді інженер з ремонту та обслуговування газовикористовуючого та газоспоживаючого обладнання.',				
+				experience2: 'з 2005р. по 2017р. на посаді інженер-теплоенергетик на підприємстві, що займається автономним теплопостачанням (проектування, встановлення, накладка, ремонт автономних котелень, котлів, систем опалення).',
+				responsibilities: {
+					title: "Обов'язки:",
+					responsibility1: 'Налагодження, обслуговування та ремонт побутових котлів, котлів малої потужності, обладнання котелень, вузлів обліку газу та газо-розподільних пунктів.',
+					responsibility2: 'Монтаж котельного обладнання, монтаж систем опалення та ГВП, монтаж теплових мереж. Підбір обладнання для проектованих міні-котелень. Налагодження, обслуговування та ремонт побутових котлів та обладнання автономних міні-котелень.',
+				}
+			},
+			englishLevel: {
+				title: 'Рівень англійської',
+				content: 'базовий (читання документації, технічний переклад з періодичним використанням словника/Google Translate)'
+			},
+			hobby: {
+				title: 'Хобі',
+				hobby1: 'Фотографія',
+				hobby2: 'Палітурнитво'				
+			},
+			postScriptum: 'А ще я знаю, як збирати кубик рубика “3x3x3”.'
+		}
+	}
+}
+            });
+
+            // Отримання перекладу та встановлення відповідного тексту для елементів на сторінці
+            function updateTranslations() {
+                document.getElementById('welcome').textContent = i18next.t('welcome');
+                document.getElementById('email_title').textContent = i18next.t('contact.email.title');
+                document.getElementById('email').textContent = i18next.t('contact.email.email1');
+                document.getElementById('phone_title').textContent = i18next.t('contact.telephoneNumber.title');
+                document.getElementById('phone1').textContent = i18next.t('contact.telephoneNumber.tel1');
+                document.getElementById('phone2').textContent = i18next.t('contact.telephoneNumber.tel2');
+                document.getElementById('telegram_title').textContent = i18next.t('contact.telegram.title');
+                document.getElementById('telegram1').textContent = i18next.t('contact.telegram.telegram1');
+                document.getElementById('viber_title').textContent = i18next.t('contact.viber.title');
+                document.getElementById('viber1').textContent = i18next.t('contact.viber.viber1');
+                document.getElementById('about_myself_title').textContent = i18next.t('aboutMyself.title');
+                document.getElementById('about_myself').textContent = i18next.t('aboutMyself.content');
+            }
+
+            // Функція для зміни мови і оновлення перекладів
+            function changeLanguage(lang) {
+            i18next.changeLanguage(lang, (err, t) => {
+                if (err) return console.log('Something went wrong while changing the language.', err);
+                updateLanguageParam(lang); // Оновлення параметра 'lang' у URL
+                updateTranslations();
+            });
+            }
+
+            // Функція для зміни параметра 'lang' у URL
+            function updateLanguageParam(lang) {
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', lang);
+            window.history.replaceState({}, '', url);
+            }
+
+            // // Переключення мови при зміні параметра 'lang' у URL
+            // window.addEventListener('DOMContentLoaded', () => {
+            // const langParam = getParameterByName('lang');
+            // if (langParam && langParam !== currentLang) {
+            //     // changeLanguage(langParam);
+            //     updateTranslations();
+            // }
+            // });
+
+            // Виклик функції оновлення перекладів
+            updateTranslations();
+        </script>
+
+  
 
         <script>
             lightGallery(document.getElementById('open-website'), {
