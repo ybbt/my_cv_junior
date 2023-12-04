@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Comfortaa&family=Diplomata+SC&family=Fira+Sans&family=Gabriela&family=Philosopher:ital@1&family=Yeseva+One&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Alumni+Sans&family=Comfortaa&family=Diplomata+SC&family=Fira+Sans&family=Gabriela&family=Philosopher:ital@1&family=Yeseva+One&family=Orelega+One&display=swap"
             rel="stylesheet"
         />
         <link
@@ -67,14 +67,14 @@
         </script>
 
         <style>
-            @media print {
+            /* @media print {
                 html {
                     font-size: 22px;
                 }
-            }
+            } */
         </style>
     </head>
-    <body class="lg:flex flex-col items-center h-full">
+    <body class="lg:flex flex-col items-center h-full print:w-[210mm]">
         <div class="flex flex-col items-center justify-between bg-[#272727] print:h-[65rem] print:bg-gray-200">
             <header
                 class="text-white h-13 leading-5 sm:h-20 print:hidden pl-10 flex items-center justify-around box-border border-2 border-slate-300 w-full sticky top-0 bg-[#272727] print:bg-gray-200 z-10"
@@ -87,8 +87,9 @@
                         </svg>
                     </label>
                     <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a href="#" class="action-print text-black">Роздрукувати</a></li>
+                        <li><a href="#" class="action-print text-black" id="print">Роздрукувати</a></li>
                         <li><btn href="en.html" class="text-black" onclick="changeLanguage('en')">English</btn></li>
+                        <li><btn href="en.html" class="text-black" onclick="changeLanguage('uk')">Українська</btn></li>
                         <!-- <li><a href="pl.html" class="text-black">Polski</a></li> -->
                     </ul>
                 </div>                
@@ -96,11 +97,11 @@
             <div class="h-full flex flex-col">
                 <article class="flex flex-col lg:flex-row print:flex-col print:psm:flex-row max-w-screen-xl bg-[#272727] print:bg-gray-200">
                     <div
-                        class="text-white print:text-black p-5 sm:min-w-0 lg:min-w-[20rem] basis-96 print:w-[800px] md:sticky md:top-20 h-2/4"
+                        class="text-white print:text-black p-5 sm:min-w-0 lg:min-w-[20rem] basis-96 print:w-[70mm] md:sticky md:top-20 h-2/4 print:relative print:md:top-0"
                         id="left_side"
                     >
                         <div class="flex flex-row lg:flex-col print:flex-col justify-around">
-                            <div class="avatar">
+                            <div class="avatar print:flex print:justify-center">
                                 <img
                                     src="AVATARA_print_sm_alt_sun.png"
                                     alt="qwerty"
@@ -121,7 +122,7 @@
                                 </div>
                             </div>
                             <h3
-                                class="text-center print:text-center font-['Gabriela'] text-2xl sm:text-4xl mt-5 print:my-2 mb-5 w-28 sm:w-48 md:w-full print:w-full flex items-center"
+                                class="text-center print:text-center font-['Orelega_One'] text-2xl sm:text-4xl mt-5 print:my-2 mb-5 w-28 sm:w-48 md:w-full print:w-full flex items-center" id="full_name"
                             >
                                 Олексій Клименко
                             </h3>
@@ -167,18 +168,18 @@
                         </aside>
                     </div>
                     <main
-                        class="grow text-xl font-['Fira_Sans'] print:ml-2 print:border-dotted print:border-l-2 print:border-black print:max-w-[70%]"
+                        class="grow text-xl font-['Fira_Sans'] print:ml-2 print:border-dotted print:border-l-2 print:border-black print:max-w-[140mm]"
                     >
-                        <div class="m-2.5 p-4 bg-[#c5dfb3] print:bg-white">
+                        <div class="m-2.5 p-4 bg-[#c5dfb3] print:bg-white print:pt-0">
                             <section class="pt-2 mb-3 print:text-sm break-inside-avoid">
                                 <h1
-                                    class="bg-[#528135] print:bg-white font-medium text-3xl print:text-lg font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 print:mb-0.5 -ml-9 print:ml-1 p-3 print:p-1 pl-6 print:pl-0 lg:w-[40rem] hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000"
+                                    class="bg-[#528135] print:bg-white font-medium text-3xl print:text-lg font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 print:mb-0.5 -ml-9 print:ml-1 p-3 print:p-1 pl-6 print:pl-0 lg:w-[40rem] hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000 print:lg:w-[90%]" id="education_title"
                                 >
                                     Освіта
                                 </h1>
                                 <ul class="list-disc list-inside ml-2">
-                                    <li>Beetroot Academy - курс Front-End розробки;</li>
-                                    <li>
+                                    <li id="education1">Beetroot Academy - курс Front-End розробки;</li>
+                                    <li id="education2">
                                         Компьютерна академія «ШАГ» - розробник програмного забезпечення;
                                         <button
                                             class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-1 text-center mr-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 print:hidden"
@@ -190,40 +191,40 @@
                                             Презентація
                                         </button>
                                     </li>
-                                    <li>«Запорізька Державна Інженерна Академія» - інженер-теплоенергетик.</li>
+                                    <li id="education3">«Запорізька Державна Інженерна Академія» - інженер-теплоенергетик.</li>
                                 </ul>
                             </section>
                             <section class="mb-3 mt-2 print:mt-0 print:text-sm break-inside-avoid">
                                 <h1
-                                    class="bg-[#528135] print:bg-white font-medium text-3xl print:text-lg font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 print:mb-0.5 -ml-9 print:ml-1 p-3 print:p-1 pl-6 print:pl-0 lg:w-[40rem] hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000"
+                                    class="bg-[#528135] print:bg-white font-medium text-3xl print:text-lg font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 print:mb-0.5 -ml-9 print:ml-1 p-3 print:p-1 pl-6 print:pl-0 lg:w-[40rem] hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000 print:lg:w-[90%]" id="skills_title"
                                 >
                                     Професійні навички
                                 </h1>
-                                <h2 class="underline">Основні:</h2>
+                                <h2 class="underline" id="skills_main_title">Основні:</h2>
                                 <ul class="list-disc list-inside ml-2 mb-3">
-                                    <li>HTML5, CSS3, JavaScript ES6, ООП, Less/SCSS, Pug, Git/GitHub, Tailwind, Bootstrap</li>
-                                    <li>React.JS, Next.js, React-Redux, Redux-Thunk, RTK Query</li>
-                                    <li>Laravel, Wordpress, Laravel-Inertia-Vue, Node.js</li>
-                                    <li>мова запитів SQL на базі MS Access, MySQL и MS SQL Server</li>
+                                    <li id="skills_main_skill1">HTML5, CSS3, JavaScript ES6, ООП, Less/SCSS, Pug, Git/GitHub, Tailwind, Bootstrap</li>
+                                    <li id="skills_main_skill2">React.JS, Next.js, React-Redux, Redux-Thunk, RTK Query</li>
+                                    <li id="skills_main_skill3">Laravel, Wordpress, Laravel-Inertia-Vue, Node.js</li>
+                                    <li id="skills_main_skill4">мова запитів SQL на базі MS Access, MySQL и MS SQL Server</li>
                                 </ul>
-                                <h2 class="underline text-sm print:text-sm text-gray-600">Додатково:</h2>
+                                <h2 class="underline text-sm print:text-sm text-gray-600" id="skills_additionally_title">Додатково:</h2>
                                 <ul class="list-disc list-inside ml-2 mb-2 text-sm print:text-xs text-gray-600">
-                                    <li>
+                                    <li id="skills_additionally_skill1">
                                         робота з платформою .Net на мові C# - технології WindowsForms, WPF, системне, мережеве програмування, WCF, GDI+,
                                         ADO.Net, ASP.Net.
                                     </li>
-                                    <li>основи C++</li>
-                                    <li>вміння працювати з Adobe Photoshop, Adobe Illustrator</li>
+                                    <li id="skills_additionally_skill2">основи C++</li>
+                                    <li id="skills_additionally_skill3">вміння працювати з Adobe Photoshop, Adobe Illustrator</li>
                                 </ul>
                             </section>
                             <section class="mb-3 mt-2 print:mt-0 print:text-sm break-inside-avoid">
                                 <h1
-                                    class="bg-[#528135] print:bg-white font-medium text-3xl print:text-lg font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 print:mb-0.5 -ml-9 print:ml-1 p-3 print:p-1 pl-6 print:pl-0 lg:w-[40rem] hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000"
+                                    class="bg-[#528135] print:bg-white font-medium text-3xl print:text-lg font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 print:mb-0.5 -ml-9 print:ml-1 p-3 print:p-1 pl-6 print:pl-0 lg:w-[40rem] hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000 print:lg:w-[90%]" id="experience_title"
                                 >
                                     Досвід роботи
                                 </h1>
                                 <ul class="list-disc list-inside ml-2 mb-4">
-                                    <li>
+                                    <li id="experience1">
                                         з жовтня 2021р. по вересень 2022р. на посаді Junior Full-Stack Web developer в <a href="https://rezet.io" class="underline">REZET</a>
                                         <span class="hidden print:inline">(http://rezet.io).</span>
                                     </li>
@@ -231,37 +232,37 @@
                             </section>
                             <section class="mb-3 mt-2 print:mt-0 print:text-sm break-inside-avoid">
                                 <h1
-                                    class="bg-[#528135] print:bg-white font-medium text-3xl print:text-lg font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 print:mb-0.5 -ml-9 print:ml-1 p-3 print:p-1 pl-6 print:pl-0 lg:w-[40rem] hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000"
+                                    class="bg-[#528135] print:bg-white font-medium text-3xl print:text-lg font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 print:mb-0.5 -ml-9 print:ml-1 p-3 print:p-1 pl-6 print:pl-0 lg:w-[40rem] hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000 print:lg:w-[90%]" id="experience_not_program_title"
                                 >
                                     Досвід роботи не програмістом
                                 </h1>
                                 <ul class="list-disc list-inside ml-2 text-justify">
                                     <li class="mt-4">
-                                        з 2017р. по 2021р. на посаді інженер з ремонту та обслуговування газовикористовуючого та газоспоживаючого обладнання.
-                                        <p>
+                                        <span id="experience_not_program1">з 2017р. по 2021р. на посаді інженер з ремонту та обслуговування газовикористовуючого та газоспоживаючого обладнання.</span>
+                                        <p id="responsibilities1">
                                             Обов'язки: Налагодження, обслуговування та ремонт побутових котлів, котлів малої потужності, обладнання котелень,
                                             вузлів обліку газу та газо-розподільних пунктів.
                                         </p>
                                     </li>
                                     <li class="mt-4">
-                                        з 2005р. по 2017р. на посаді інженер-теплоенергетик на підприємстві, що займається автономним теплопостачанням
-                                        (проектування, встановлення, накладка, ремонт автономних котелень, котлів, систем опалення). 
-                                        <p>Обов'язки: Монтаж котельного обладнання, монтаж систем опалення та ГВП, монтаж теплових мереж. Підбір обладнання для проектованих міні-котелень.
+                                        <span id="experience_not_program2">з 2005р. по 2017р. на посаді інженер-теплоенергетик на підприємстві, що займається автономним теплопостачанням
+                                        (проектування, встановлення, накладка, ремонт автономних котелень, котлів, систем опалення).</span> 
+                                        <p id="responsibilities2">Обов'язки: Монтаж котельного обладнання, монтаж систем опалення та ГВП, монтаж теплових мереж. Підбір обладнання для проектованих міні-котелень.
                                         Налагодження, обслуговування та ремонт побутових котлів та обладнання автономних міні-котелень.</p>
                                     </li>
                                 </ul>
                             </section>
                             <section class="mb-3 mt-2 print:mt-0 print:text-sm break-inside-avoid">
                                 <h1
-                                    class="bg-[#528135] print:bg-white font-medium text-3xl print:text-lg font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 print:mb-0.5 -ml-9 print:ml-1 p-3 print:p-1 pl-6 print:pl-0 lg:w-[40rem] hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000"
+                                    class="bg-[#528135] print:bg-white font-medium text-3xl print:text-lg font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 print:mb-0.5 -ml-9 print:ml-1 p-3 print:p-1 pl-6 print:pl-0 lg:w-[40rem] hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000 print:lg:w-[90%]" id="languages_title"
                                 >
                                     Рівень англійської
                                 </h1>
-                                базовий (читання документації, технічний переклад з періодичним використанням словника/Google Translate)
+                                <span id="languages1">базовий (читання документації, технічний переклад з періодичним використанням словника/Google Translate)</span>
                             </section>
                             <section class="mt-2 print:mt-0 print:text-sm break-inside-avoid">
                                 <h1
-                                    class="bg-[#528135] print:bg-white font-medium text-3xl print:text-lg font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 print:mb-0.5 -ml-9 print:ml-1 p-3 print:p-1 pl-6 print:pl-0 lg:w-[40rem] hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000"
+                                    class="bg-[#528135] print:bg-white font-medium text-3xl print:text-lg font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 print:mb-0.5 -ml-9 print:ml-1 p-3 print:p-1 pl-6 print:pl-0 lg:w-[40rem] hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000 print:lg:w-[90%]" id="hobbies_title"
                                 >
                                     Хобі
                                 </h1>
@@ -280,7 +281,7 @@
                                             aria-expanded="false"
                                             aria-controls="accordion-flush-body-1"
                                         >
-                                            <span>Палітурництво (Bookbinding)</span>
+                                            <span id="hobbies1">Палітурництво (Bookbinding)</span>
                                             <svg
                                                 data-accordion-icon
                                                 class="w-6 h-6 shrink-0 print:hidden"
@@ -345,7 +346,7 @@
                                             aria-expanded="false"
                                             aria-controls="accordion-flush-body-2"
                                         >
-                                            <span>Фотографія</span>
+                                            <span id="hobbies2">Фотографія</span>
                                             <svg
                                                 data-accordion-icon
                                                 class="w-6 h-6 shrink-0 print:hidden"
@@ -437,7 +438,7 @@
                 <div class="flex border-2 border-white w-max p-2 bg-zinc-600">
                     <div>
                         <h6 class="underline">post scriptum</h6>
-                        А ще я знаю, як збирати кубик рубика “3x3x3”.
+                        <span id="post_scriptum">А ще я знаю, як збирати кубик рубика “3x3x3”.</span>
                     </div>
                     <img src="rubik.png" alt="rubik" class="w-14 h-14 self-end ml-2 print:hidden" />
                 </div>
@@ -493,10 +494,12 @@
             resources: {
 	en: {
 		translation: {
+            print: "Print",
 			welcome: 'web developer',
 			contact: {
 				firstName: 'Oleksii',
 				lastName: 'Klymenko',
+                fullName: '$t(contact.firstName) $t(contact.lastName)',
 				email: {
 					title: 'Email',
 					email1: 'olexiy.k.dev@gmail.com',
@@ -527,15 +530,16 @@
 				buttonPresentation: 'Presentation'
 			},
 			skillsProfessional: {
-				title: 'Основні',
-				main: {
-					title: 'HTML5, CSS3, JavaScript ES6, ООП, Less/SCSS, Pug, Git/GitHub, Tailwind, Bootstrap',
-					skill1: 'React.JS, Next.js, React-Redux, Redux-Thunk, RTK Query',
-					skill2: 'Laravel, Wordpress, Laravel-Inertia-Vue, Node.js',
-					skill3: 'the query language of SQL requests based on MS Access, MySQL and MS SQL Server'
+                title: 'Skills professional',
+                main: {
+                    title: 'Main:',
+					skill1: 'HTML5, CSS3, JavaScript ES6, ООП, Less/SCSS, Pug, Git/GitHub, Tailwind, Bootstrap',
+					skill2: 'React.JS, Next.js, React-Redux, Redux-Thunk, RTK Query',
+					skill3: 'Laravel, Wordpress, Laravel-Inertia-Vue, Node.js',
+					skill4: 'the query language of SQL requests based on MS Access, MySQL and MS SQL Server'
 				},
 				additionally: {
-					title: 'Additionally',
+					title: 'Additionally:',
 					skill1: 'working with the .Net platform in the C# language - WindowsForms, WPF, system programming, network programming, WCF, GDI+, ADO.Net, ASP.Net',
 					skill2: 'C++',
 					skill3: 'ability to work with Adobe Photoshop, Adobe Illustrator',
@@ -546,13 +550,13 @@
 				experience1: 'since October 2021 to September 2022 in the position of junior full-stack web developer in REZET',
 			},
 			workExperienceNotProgrammer: {
-				title: '',
-				experience1: 'since 2017 to 2021 in the position of an engineer for the repair and maintenance of gas-using and gas-consuming equipment',				
-				experience2: 'since 2005 for 2017 in the position of a thermal power engineer at the company engaged in autonomous heat supply (design, installation, overlay, repair of autonomous boiler houses, boilers, heating systems)',
+				title: 'Work experience is not a programmer',
+				experience1: 'since 2017 to 2021 in the position of an engineer for the repair and maintenance of gas-using and gas-consuming equipment.',				
+				experience2: 'since 2005 for 2017 in the position of a thermal power engineer at the company engaged in autonomous heat supply (design, installation, overlay, repair of autonomous boiler houses, boilers, heating systems).',
 				responsibilities: {
 					title: 'Responsibilities:',
-					responsibility1: 'Installation, maintenance and repair of household boilers, low-power boilers, boiler room equipment, gas metering units and gas distribution points.',
-					responsibility2: 'Installation of boiler equipment, installation heating and domestic hot water systems, installation of heat networks. Selection of equipment for the designed mini boiler room. Debugging, maintenance and repair of domestic boilers and equipment of autonomous mini-boilers.',
+					responsibility1: '$t(workExperienceNotProgrammer.responsibilities.title) Installation, maintenance and repair of household boilers, low-power boilers, boiler room equipment, gas metering units and gas distribution points.',
+					responsibility2: '$t(workExperienceNotProgrammer.responsibilities.title) Installation of boiler equipment, installation heating and domestic hot water systems, installation of heat networks. Selection of equipment for the designed mini boiler room. Debugging, maintenance and repair of domestic boilers and equipment of autonomous mini-boilers.',
 				}
 			},
 			englishLevel: {
@@ -569,10 +573,12 @@
 	},
 	uk: {
 		translation: {
+            print: "Роздрукувати",
 			welcome: 'web developer',
 			contact: {
 				firstName: 'Олексій',
 				lastName: 'Клименко',
+                fullName: '$t(contact.firstName) $t(contact.lastName)',
 				email: {
 					title: 'Email',
 					email1: 'olexiy.k@i.ua',
@@ -598,20 +604,21 @@
 			education: {
 				title: 'Освіта:',
 				education1: 'Beetroot Academy - курс Front-End розробки;',
-				education2: 'Компьютерна академія «ШАГ» - розробник програмного забезпечення;',
+				education2: 'Комп`ютерна академія «ШАГ» - розробник програмного забезпечення;',
 				education3: '«Запорізька Державна Інженерна Академія» - інженер-теплоенергетик.',
 				buttonPresentation: 'Презентація'
 			},
 			skillsProfessional: {
-				title: 'Основні',
-				main: {
-					title: 'HTML5, CSS3, JavaScript ES6, ООП, Less/SCSS, Pug, Git/GitHub, Tailwind, Bootstrap',
-					skill1: 'React.JS, Next.js, React-Redux, Redux-Thunk, RTK Query',
-					skill2: 'Laravel, Wordpress, Laravel-Inertia-Vue, Node.js',
-					skill3: 'мова запитів SQL на базі MS Access, MySQL и MS SQL Server'
+                title: 'Професійні навички',
+                main: {
+                    title: 'Основні:',
+					skill1: 'HTML5, CSS3, JavaScript ES6, ООП, Less/SCSS, Pug, Git/GitHub, Tailwind, Bootstrap',
+					skill2: 'React.JS, Next.js, React-Redux, Redux-Thunk, RTK Query',
+					skill3: 'Laravel, Wordpress, Laravel-Inertia-Vue, Node.js',
+					skill4: 'мова запитів SQL на базі MS Access, MySQL и MS SQL Server'
 				},
 				additionally: {
-					title: 'Додатково',
+					title: 'Додатково:',
 					skill1: 'робота з платформою .Net на мові C# - технології WindowsForms, WPF, системне, мережеве програмування, WCF, GDI+, ADO.Net, ASP.Net',
 					skill2: 'основи C++',
 					skill3: 'вміння працювати з Adobe Photoshop, Adobe Illustrator',
@@ -622,13 +629,13 @@
 				experience1: 'з жовтня 2021р. по вересень 2022р. на посаді Junior Full-Stack Web developer в REZET'
 			},
 			workExperienceNotProgrammer: {
-				title: '',
+				title: 'Досвід роботи не програмістом',
 				experience1: 'з 2017р. по 2021р. на посаді інженер з ремонту та обслуговування газовикористовуючого та газоспоживаючого обладнання.',				
 				experience2: 'з 2005р. по 2017р. на посаді інженер-теплоенергетик на підприємстві, що займається автономним теплопостачанням (проектування, встановлення, накладка, ремонт автономних котелень, котлів, систем опалення).',
 				responsibilities: {
 					title: "Обов'язки:",
-					responsibility1: 'Налагодження, обслуговування та ремонт побутових котлів, котлів малої потужності, обладнання котелень, вузлів обліку газу та газо-розподільних пунктів.',
-					responsibility2: 'Монтаж котельного обладнання, монтаж систем опалення та ГВП, монтаж теплових мереж. Підбір обладнання для проектованих міні-котелень. Налагодження, обслуговування та ремонт побутових котлів та обладнання автономних міні-котелень.',
+					responsibility1: '$t(workExperienceNotProgrammer.responsibilities.title) Налагодження, обслуговування та ремонт побутових котлів, котлів малої потужності, обладнання котелень, вузлів обліку газу та газо-розподільних пунктів.',
+					responsibility2: '$t(workExperienceNotProgrammer.responsibilities.title) Монтаж котельного обладнання, монтаж систем опалення та ГВП, монтаж теплових мереж. Підбір обладнання для проектованих міні-котелень. Налагодження, обслуговування та ремонт побутових котлів та обладнання автономних міні-котелень.',
 				}
 			},
 			englishLevel: {
@@ -649,6 +656,8 @@
             // Отримання перекладу та встановлення відповідного тексту для елементів на сторінці
             function updateTranslations() {
                 document.getElementById('welcome').textContent = i18next.t('welcome');
+                document.getElementById('print').textContent = i18next.t('print');
+                document.getElementById('full_name').textContent = i18next.t('contact.fullName');
                 document.getElementById('email_title').textContent = i18next.t('contact.email.title');
                 document.getElementById('email').textContent = i18next.t('contact.email.email1');
                 document.getElementById('phone_title').textContent = i18next.t('contact.telephoneNumber.title');
@@ -660,6 +669,33 @@
                 document.getElementById('viber1').textContent = i18next.t('contact.viber.viber1');
                 document.getElementById('about_myself_title').textContent = i18next.t('aboutMyself.title');
                 document.getElementById('about_myself').textContent = i18next.t('aboutMyself.content');
+                document.getElementById('education_title').textContent = i18next.t('education.title');
+                document.getElementById('education1').textContent = i18next.t('education.education1');
+                document.getElementById('education2').textContent = i18next.t('education.education2');
+                document.getElementById('education3').textContent = i18next.t('education.education3');
+                document.getElementById('skills_title').textContent = i18next.t('skillsProfessional.title');
+                document.getElementById('skills_main_title').textContent = i18next.t('skillsProfessional.main.title');
+                document.getElementById('skills_main_skill1').textContent = i18next.t('skillsProfessional.main.skill1');
+                document.getElementById('skills_main_skill2').textContent = i18next.t('skillsProfessional.main.skill2');
+                document.getElementById('skills_main_skill3').textContent = i18next.t('skillsProfessional.main.skill3');
+                document.getElementById('skills_main_skill4').textContent = i18next.t('skillsProfessional.main.skill4');
+                document.getElementById('skills_additionally_title').textContent = i18next.t('skillsProfessional.additionally.title');
+                document.getElementById('skills_additionally_skill1').textContent = i18next.t('skillsProfessional.additionally.skill1');
+                document.getElementById('skills_additionally_skill2').textContent = i18next.t('skillsProfessional.additionally.skill2');
+                document.getElementById('skills_additionally_skill3').textContent = i18next.t('skillsProfessional.additionally.skill3');
+                document.getElementById('experience_title').textContent = i18next.t('workExperience.title');
+                document.getElementById('experience1').textContent = i18next.t('workExperience.experience1');
+                document.getElementById('experience_not_program_title').textContent = i18next.t('workExperienceNotProgrammer.title');
+                document.getElementById('experience_not_program1').textContent = i18next.t('workExperienceNotProgrammer.experience1');
+                document.getElementById('responsibilities1').textContent = i18next.t('workExperienceNotProgrammer.responsibilities.responsibility1');
+                document.getElementById('responsibilities2').textContent = i18next.t('workExperienceNotProgrammer.responsibilities.responsibility2');
+                document.getElementById('experience_not_program2').textContent = i18next.t('workExperienceNotProgrammer.experience2');
+                document.getElementById('languages_title').textContent = i18next.t('englishLevel.title');
+                document.getElementById('languages1').textContent = i18next.t('englishLevel.content');
+                document.getElementById('hobbies_title').textContent = i18next.t('hobby.title');
+                document.getElementById('hobbies1').textContent = i18next.t('hobby.hobby2');
+                document.getElementById('hobbies2').textContent = i18next.t('hobby.hobby1');
+                document.getElementById('post_scriptum').textContent = i18next.t('postScriptum');
             }
 
             // Функція для зміни мови і оновлення перекладів
@@ -793,8 +829,8 @@
             $(function () {
                 if ($('#print-qr').length == 0) {
                     $('#left_side').append(
-                        '<style>@media screen {#print-qr{display: none;}}</style>' +
-                            '<p id="print-qr" class="flex justify-center mt-8"><img src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&choe=UTF-8&chld=H&chl=' +
+                        '<style>@media screen {#print_qr{display: none;}}</style>' +
+                            '<p id="print_qr" class="flex justify-center mt-8"><img class="w-28" src="https://chart.googleapis.com/chart?cht=qr&chs=200x200&choe=UTF-8&chld=H&chl=' +
                             window.location.href +
                             '"></p>'
                     );
