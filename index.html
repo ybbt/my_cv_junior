@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CV</title>
+        <meta name="staticTitle" content="CV_Junior_WEB_Developer_Klymenko_Oleksii">
+        <title>CV_Junior_WEB_Developer_Klymenko_Oleksii_ua_2023_12_06</title>
         <link rel="icon" type="image/x-icon" href="curriculum-vitae.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -101,7 +102,7 @@
                         id="left_side"
                     >
                         <div class="flex flex-row lg:flex-col print:flex-col justify-around">
-                            <div class="avatar print:flex print:justify-center">
+                            <div class="avatar print:justify-center print:hidden"><!-- print:flex -->
                                 <img
                                     src="AVATARA_print_sm_alt_sun.png"
                                     alt="qwerty"
@@ -178,11 +179,11 @@
                                     Освіта
                                 </h1>
                                 <ul class="list-disc list-inside ml-2">
-                                    <li id="education1">Beetroot Academy - курс Front-End розробки;</li>
-                                    <li id="education2">
-                                        Компьютерна академія «ШАГ» - розробник програмного забезпечення;
+                                    <li><span id="education1">Beetroot Academy - курс Front-End розробки;</span></li>
+                                    <li><span id="education2">Компьютерна академія «ШАГ» - розробник програмного забезпечення;</span>
                                         <button
-                                            class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-1 text-center mr-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 print:hidden"
+                                            id="buttonPresentation"
+                                            class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-1 text-center mr-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 inline print:hidden"
                                             data-iframe="true"
                                             id="open-website"
                                             data-src="https://onedrive.live.com/embed?cid=4133D6A2F1D1BE8C&resid=4133D6A2F1D1BE8C%2182432&authkey=AMqcqW37R_rLkNA&em=2"
@@ -191,7 +192,7 @@
                                             Презентація
                                         </button>
                                     </li>
-                                    <li id="education3">«Запорізька Державна Інженерна Академія» - інженер-теплоенергетик.</li>
+                                    <li><span id="education3">«Запорізька Державна Інженерна Академія» - інженер-теплоенергетик.</span></li>
                                 </ul>
                             </section>
                             <section class="mb-3 mt-2 print:mt-0 print:text-sm break-inside-avoid">
@@ -224,9 +225,13 @@
                                     Досвід роботи
                                 </h1>
                                 <ul class="list-disc list-inside ml-2 mb-4">
-                                    <li id="experience1">
-                                        з жовтня 2021р. по вересень 2022р. на посаді Junior Full-Stack Web developer в <a href="https://rezet.io" class="underline">REZET</a>
+                                    <li>
+                                        <span id="experience1">з жовтня 2021р. по вересень 2022р. на посаді Junior Full-Stack Web developer в <a href="https://rezet.io" class="underline">REZET</a></span>
                                         <span class="hidden print:inline">(http://rezet.io).</span>
+                                    </li>
+                                    <li>
+                                        <span id="experience2">з серпня 2023р. на посаді Junior Full-Stack Web developer на волонтерських засадах в <a href="https://junfolio.top" class="underline">JunFolio</a></span>
+                                        <span class="hidden print:inline">(https://junfolio.top).</span>
                                     </li>
                                 </ul>
                             </section>
@@ -494,6 +499,7 @@
             resources: {
 	en: {
 		translation: {
+            currentLocale: "en",
             print: "Print",
 			welcome: 'web developer',
 			contact: {
@@ -523,7 +529,7 @@
 				content: 'Logic is the basis of my method of understanding the world. If something has logic in it, sooner or later I will be able to figure out how to work with it. And if I spend more time, I will figure out how it is arranged.'
 			},
 			education: {
-				title: 'Education:',
+				title: 'Education',
 				education1: 'Beetroot Academy - Front-End development course;',
 				education2: 'IT Step Academy - software developer;',
 				education3: '«Zaporizhzhia State Engineering Academy» - thermal-power engineer.',
@@ -547,7 +553,8 @@
 			},
 			workExperience: {
 				title: 'Work experience',
-				experience1: 'since October 2021 to September 2022 in the position of junior full-stack web developer in REZET',
+				experience1: 'since October 2021 to September 2022 in the position of junior full-stack web developer in  {{link}}',
+                experience2: 'since August 2023 in the position of junior full-stack web developer on a volunteer basis in {{link}}',
 			},
 			workExperienceNotProgrammer: {
 				title: 'Work experience is not a programmer',
@@ -573,6 +580,7 @@
 	},
 	uk: {
 		translation: {
+            currentLocale: "ua",
             print: "Роздрукувати",
 			welcome: 'web developer',
 			contact: {
@@ -602,7 +610,7 @@
 				content: 'В основі мого методу пізнання світу лежить логіка. Якщо щось містить у собі логіку, то рано чи пізно я зможу розібратися, як із цим працювати. А якщо витратити ще часу, то й розберуся, як це влаштовано'
 			},
 			education: {
-				title: 'Освіта:',
+				title: 'Освіта',
 				education1: 'Beetroot Academy - курс Front-End розробки;',
 				education2: 'Комп`ютерна академія «ШАГ» - розробник програмного забезпечення;',
 				education3: '«Запорізька Державна Інженерна Академія» - інженер-теплоенергетик.',
@@ -626,7 +634,8 @@
 			},
 			workExperience: {
 				title: 'Досвід роботи',
-				experience1: 'з жовтня 2021р. по вересень 2022р. на посаді Junior Full-Stack Web developer в REZET'
+				experience1: 'з жовтня 2021р. по вересень 2022р. на посаді Junior Full-Stack Web developer в {{link}}',
+                experience2: 'з серпня 2023р. на посаді Junior Full-Stack Web developer на волонтерських засадах в {{link}}'
 			},
 			workExperienceNotProgrammer: {
 				title: 'Досвід роботи не програмістом',
@@ -672,6 +681,7 @@
                 document.getElementById('education_title').textContent = i18next.t('education.title');
                 document.getElementById('education1').textContent = i18next.t('education.education1');
                 document.getElementById('education2').textContent = i18next.t('education.education2');
+                document.getElementById('buttonPresentation').textContent = i18next.t('education.buttonPresentation');
                 document.getElementById('education3').textContent = i18next.t('education.education3');
                 document.getElementById('skills_title').textContent = i18next.t('skillsProfessional.title');
                 document.getElementById('skills_main_title').textContent = i18next.t('skillsProfessional.main.title');
@@ -684,7 +694,8 @@
                 document.getElementById('skills_additionally_skill2').textContent = i18next.t('skillsProfessional.additionally.skill2');
                 document.getElementById('skills_additionally_skill3').textContent = i18next.t('skillsProfessional.additionally.skill3');
                 document.getElementById('experience_title').textContent = i18next.t('workExperience.title');
-                document.getElementById('experience1').textContent = i18next.t('workExperience.experience1');
+                document.getElementById('experience1').innerHTML = i18next.t('workExperience.experience1', {link: '<a href="https://rezet.io" class="underline">REZET</a>', interpolation: { escapeValue: false } });
+                document.getElementById('experience2').innerHTML = i18next.t('workExperience.experience2', {link: '<a href="https://junfolio.top" class="underline">JunFolio</a>', interpolation: { escapeValue: false }  });
                 document.getElementById('experience_not_program_title').textContent = i18next.t('workExperienceNotProgrammer.title');
                 document.getElementById('experience_not_program1').textContent = i18next.t('workExperienceNotProgrammer.experience1');
                 document.getElementById('responsibilities1').textContent = i18next.t('workExperienceNotProgrammer.responsibilities.responsibility1');
@@ -699,13 +710,84 @@
             }
 
             // Функція для зміни мови і оновлення перекладів
-            function changeLanguage(lang) {
-            i18next.changeLanguage(lang, (err, t) => {
-                if (err) return console.log('Something went wrong while changing the language.', err);
-                updateLanguageParam(lang); // Оновлення параметра 'lang' у URL
-                updateTranslations();
-            });
+            // function changeLanguage(lang) {
+            //     i18next.changeLanguage(lang, (err, t) => {
+            //         if (err) return console.log('Something went wrong while changing the language.', err);
+            //         updateLanguageParam(lang); // Оновлення параметра 'lang' у URL
+            //         updateTranslations();
+            //     });
+            // }
+
+            // Функція для оновлення QR-коду на основі поточного URL та мови
+    function updateQRCode() {
+        const qrCodeUrl = 'https://chart.googleapis.com/chart?cht=qr&chs=200x200&choe=UTF-8&chld=H&chl=' + window.location.href;
+        $('#print_qr img').attr('src', qrCodeUrl);
+    }
+
+    function updateTitle () {
+                // Створюємо новий об'єкт Date
+                const currentDate = new Date();
+    
+                // Отримуємо значення року, місяця та дня
+                const year = currentDate.getFullYear();
+                const month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // додаємо 1, оскільки місяці в JavaScript індексуються з 0
+                const day = currentDate.getDate().toString().padStart(2, '0');
+    
+                // Форматуємо рядок у бажаному форматі
+                const formattedDate = year + '_' + month + '_' + day;
+    
+                // Зберігаємо поточний заголовок
+                // const currentTitle = document.title;
+
+                const staticTitle = document.querySelector('meta[name="staticTitle"]').content;
+
+                
+                // Отримуємо текучий текст для локалізації заголовка вкладки
+                const currentLocaleText = i18next.t('currentLocale');
+    
+                // Створюємо новий заголовок, додаючи до поточного тексту нову дату
+                const newTitle = staticTitle + '_' + currentLocaleText + '_' + formattedDate;
+    
+                // Встановлюємо новий заголовок вкладки
+                document.title = newTitle;
+                
             }
+
+    // Функція для зміни мови
+    function changeLanguage(lang) {
+        i18next.changeLanguage(lang, (err, t) => {
+            if (err) return console.log('Something went wrong while changing the language.', err);
+            
+            // Оновлення параметра 'lang' у URL
+            updateLanguageParam(lang);
+            
+            // Оновлення перекладів
+            updateTranslations();
+
+            // Оновлення QR-коду
+            updateQRCode();
+            
+            updateTitle();
+
+            $('#pageLink').html(window.location.href);
+
+        });
+    }
+
+    // Логіка для відображення QR-коду при завантаженні сторінки
+    $(function () {
+        if ($('#print-qr').length == 0) {
+            $('#left_side').append(
+                '<style>@media screen {#print_qr{display: none;}}</style>' +
+                    '<p id="print_qr" class="flex justify-center mt-8"><img class="w-28" src=""></p>'
+            );
+            
+            // Оновлення QR-коду при старті
+            updateQRCode();
+
+            updateTitle();
+        }
+    });
 
             // Функція для зміни параметра 'lang' у URL
             function updateLanguageParam(lang) {
@@ -825,7 +907,7 @@
             });
         </script>
 
-        <script>
+        <!-- <script>
             $(function () {
                 if ($('#print-qr').length == 0) {
                     $('#left_side').append(
@@ -836,7 +918,7 @@
                     );
                 }
             });
-        </script>
+        </script> -->
 
         <script>
             $('#pageLink').append(window.location.href);
