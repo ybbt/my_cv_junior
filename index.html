@@ -228,14 +228,33 @@
                                     <li>
                                         <span id="experience1">з жовтня 2021р. по вересень 2022р. на посаді Junior Full-Stack Web developer в <a href="https://rezet.io" class="underline">REZET</a></span>
                                         <span class="hidden print:inline">(http://rezet.io).</span>
+                                        <ul class="list-disc list-inside ml-2 mb-4 text-base print:text-xs">
+                                            <li>
+                                                <span id="project11">Проєкт на стажуванні - Прототип соціальної мережі для спілкування</span>
+                                                <div class="ml-8"><span class="font-semibold mr-2" id="involvement_title11">Залучення: </span><span id="involvement11">Зроблений самостійно з нуля</span></div>
+                                                <div class="ml-8"><span class="font-semibold mr-2" id="technology_title11">Технології: </span><span id="technology11">Larvel, Next.js, RTK Query, Tailwind, MySQL</span></div>
+                                            </li>
+                                            <li>
+                                                <span id="project12">Сайт агентства з нерухомості - https://gadrealty.com</span>
+                                                <div class="ml-8"><span class="font-semibold mr-2" id="involvement_title12">Залучення: </span><span id="involvement12">Додання нового функціоналу та внесення невеликих виправлень</span></div>
+                                                <div class="ml-8"><span class="font-semibold mr-2" id="technology_title12">Технології: </span><span id="technology12">Worldpress, Laravel, Bootstrap</span></div>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li>
                                         <span id="experience2">з серпня 2023р. на посаді Junior Full-Stack Web developer на волонтерських засадах в <a href="https://junfolio.top" class="underline">JunFolio</a></span>
                                         <span class="hidden print:inline">(https://junfolio.top).</span>
+                                        <ul class="list-disc list-inside ml-2 mb-4 text-base print:text-xs">
+                                            <li>
+                                                <span id="project21">Сайт молодіжної організації з кабінетом адміністратора - https://yunka.com.ua</span>
+                                                <div class="ml-8"><span class="font-semibold mr-2" id="involvement_title21">Залучення: </span><span id="involvement21">Зроблений в команді з нуля</span></div>
+                                                <div class="ml-8"><span class="font-semibold mr-2" id="technology_title21">Технології: </span><span id="technology21">Next.js, HTML, SCSS, Node.js, MongoDB</span></div>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </section>
-                            <section class="mb-3 mt-2 print:mt-0 print:text-sm break-inside-avoid">
+                            <section class="mb-3 mt-2 print:mt-0 print:text-sm break-inside-avoid print:hidden">
                                 <h1
                                     class="bg-[#528135] print:bg-white font-medium text-3xl print:text-lg font-['Yeseva_One'] text-white print:text-black mt-0 mb-2 print:mb-0.5 -ml-9 print:ml-1 p-3 print:p-1 pl-6 print:pl-0 lg:w-[40rem] hover:shadow-[6px_6px_7px_1px_rgba(0,0,0,0.3)] hover:-translate-x-2 hover:-translate-y-2 transition ease-in-out delay-150 duration-1000 print:lg:w-[90%]" id="experience_not_program_title"
                                 >
@@ -555,6 +574,23 @@
 				title: 'Work experience',
 				experience1: 'since October 2021 to September 2022 in the position of junior full-stack web developer in  {{link}}',
                 experience2: 'since August 2023 in the position of junior full-stack web developer on a volunteer basis in {{link}}',
+                description: {
+                    description11: 'Internship project - Prototype of a social network for communication',
+                    description12: 'Website of a real estate agency - https://gadrealty.com',
+                    description21: 'Website of a youth organization with an administrator\'s office - https://yunka.com.ua',
+                },
+                involvement: {
+                    title: 'Involvement:',
+                    involvement11: 'Self-made from scratch',
+                    involvement12: 'Adding new functionality and making small fixes',
+                    involvement21: 'Made in a team from scratch',
+                },
+                technology: {
+                    title: 'Technology:',
+                    technology11: 'Larvel, Next.js, RTK Query, Tailwind, MySQL',
+                    technology12: 'Worldpress, Laravel, Bootstrap',
+                    technology21: 'Next.js, HTML, SCSS, Node.js, MongoDB',
+                }
 			},
 			workExperienceNotProgrammer: {
 				title: 'Work experience is not a programmer',
@@ -635,7 +671,24 @@
 			workExperience: {
 				title: 'Досвід роботи',
 				experience1: 'з жовтня 2021р. по вересень 2022р. на посаді Junior Full-Stack Web developer в {{link}}',
-                experience2: 'з серпня 2023р. на посаді Junior Full-Stack Web developer на волонтерських засадах в {{link}}'
+                experience2: 'з серпня 2023р. на посаді Junior Full-Stack Web developer на волонтерських засадах в {{link}}',
+                description: {
+                    description11: 'Проєкт на стажуванні - Прототип соціальної мережі для спілкування',
+                    description12: 'Сайт агентства з нерухомості - https://gadrealty.com',
+                    description21: 'Сайт молодіжної організації з кабінетом адміністратора - https://yunka.com.ua',
+                },
+                involvement: {
+                    title: 'Залучення:',
+                    involvement11: 'Зроблений самостійно з нуля',
+                    involvement12: 'Додання нового функціоналу та внесення невеликих виправлень',
+                    involvement21: 'Зроблений в команді з нуля',
+                },
+                technology: {
+                    title: 'Технології:',
+                    technology11: 'Larvel, Next.js, RTK Query, Tailwind, MySQL',
+                    technology12: 'Worldpress, Laravel, Bootstrap',
+                    technology21: 'Next.js, HTML, SCSS, Node.js, MongoDB',
+                }
 			},
 			workExperienceNotProgrammer: {
 				title: 'Досвід роботи не програмістом',
@@ -695,7 +748,22 @@
                 document.getElementById('skills_additionally_skill3').textContent = i18next.t('skillsProfessional.additionally.skill3');
                 document.getElementById('experience_title').textContent = i18next.t('workExperience.title');
                 document.getElementById('experience1').innerHTML = i18next.t('workExperience.experience1', {link: '<a href="https://rezet.io" class="underline">REZET</a>', interpolation: { escapeValue: false } });
+                document.getElementById('project11').textContent = i18next.t('workExperience.description.description11');
+                document.getElementById('involvement_title11').textContent = i18next.t('workExperience.involvement.title');
+                document.getElementById('involvement11').textContent = i18next.t('workExperience.involvement.involvement11');
+                document.getElementById('technology_title11').textContent = i18next.t('workExperience.technology.title');
+                document.getElementById('technology11').textContent = i18next.t('workExperience.technology.technology11');
+                document.getElementById('project12').textContent = i18next.t('workExperience.description.description12');
+                document.getElementById('involvement_title12').textContent = i18next.t('workExperience.involvement.title');
+                document.getElementById('involvement12').textContent = i18next.t('workExperience.involvement.involvement12');
+                document.getElementById('technology_title12').textContent = i18next.t('workExperience.technology.title');
+                document.getElementById('technology12').textContent = i18next.t('workExperience.technology.technology12');
                 document.getElementById('experience2').innerHTML = i18next.t('workExperience.experience2', {link: '<a href="https://junfolio.top" class="underline">JunFolio</a>', interpolation: { escapeValue: false }  });
+                document.getElementById('project21').textContent = i18next.t('workExperience.description.description21');
+                document.getElementById('involvement_title21').textContent = i18next.t('workExperience.involvement.title');
+                document.getElementById('involvement21').textContent = i18next.t('workExperience.involvement.involvement21');
+                document.getElementById('technology_title21').textContent = i18next.t('workExperience.technology.title');
+                document.getElementById('technology21').textContent = i18next.t('workExperience.technology.technology21');
                 document.getElementById('experience_not_program_title').textContent = i18next.t('workExperienceNotProgrammer.title');
                 document.getElementById('experience_not_program1').textContent = i18next.t('workExperienceNotProgrammer.experience1');
                 document.getElementById('responsibilities1').textContent = i18next.t('workExperienceNotProgrammer.responsibilities.responsibility1');
